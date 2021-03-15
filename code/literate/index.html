@@ -11,7 +11,7 @@
    
   <link rel="stylesheet" href="/css/jtd.css">
   <link rel="icon" href="/assets/infra/logoF_square.gif">
-   <title>Building static websites in Julia</title>  
+   <title>Work with Literate.jl</title>  
 
   <!-- LUNR -->
   <script src="/libs/lunr/lunr.min.js"></script>
@@ -49,7 +49,7 @@
       <div class="menu" id="side-menu">
         <ul class="menu-list">
           <!-- HOME -->
-          <li class="menu-list-item active"><a href="/" class="menu-list-link">• Home</a>
+          <li class="menu-list-item "><a href="/" class="menu-list-link">• Home</a>
           <!-- Research -->
           <li class="menu-list-parent "><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
             <ul class="menu-list-child-list ">
@@ -147,64 +147,98 @@
 -->
 
 <!-- Content appended here (in class franklin-content) -->
-<div class="franklin-content"><h1 id="building_static_websites_in_julia"><a href="#building_static_websites_in_julia" class="header-anchor">Building static websites in Julia</a></h1>
+<div class="franklin-content"><h1 id="work_with_literatejl"><a href="#work_with_literatejl" class="header-anchor">Work with Literate.jl</a></h1>
 
-    <span style="font-size:24px;font-weight:300;">Franklin is a simple, customisable static site generator oriented towards technical blogging and light, fast-loading pages.</span>
+    <span style="font-size:24px;font-weight:300;">Franklin works seamlessly with Literate to offer a convenient way to write and maintain tutorials.</span>
     
-<h2 id="key_features"><a href="#key_features" class="header-anchor">Key features</a></h2>
-<h2 id="key_features__2"><a href="#key_features__2" class="header-anchor">Key features</a></h2>
-<p><em>click on the &#39;&check;&#39; sign to know more</em></p>
-<div class="flist"><ul>
-<li><p><a href="/syntax/markdown/" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a>Augmented markdown allowing definition of LaTeX-like commands,</p>
-</li>
-<li><p><a href="/syntax/divs-commands/" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Easy inclusion of user-defined div-blocks,</p>
-</li>
-<li><p><a href="/syntax/divs-commands/" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Maths rendered via <a href="https://katex.org/">KaTeX</a>, code via <a href="https://highlightjs.org">highlight.js</a> both can be pre-rendered,</p>
-</li>
-<li><p><a href="/code/" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Can live-evaluate Julia code blocks,</p>
-</li>
-<li><p><a href="/workflow/#creating_your_website" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Live preview of modifications,</p>
-</li>
-<li><p><a href="/workflow/#optimisation_step" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Simple optimisation step to compress and pre-render the website,</p>
-</li>
-<li><p><a href="/workflow/#publication_step" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Simple publication step to deploy the website,</p>
-</li>
-<li><p><a href="/code/literate/" id="goto"><span id="check">&check;</span><span id="arrow"><b>&rarr;</b></span></a> Straightforward integration with <a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a>.</p>
-</li>
-</ul></div>
-<div class="note"><div class="title">⚠ Note</div>
-<div class="content">If you already have experience with Franklin and just want to keep an eye on &#40;new&#41; tips and tricks, have a look at the short <a href="/demos/">demos</a></div></div>
-<h2 id="quick_start"><a href="#quick_start" class="header-anchor">Quick start</a></h2>
-<p>To install Franklin with Julia <strong>≥ 1.3</strong>,</p>
-<pre><code class="language-julia-repl">&#40;v1.4&#41; pkg&gt; add Franklin</code></pre>
-<p>You can then just try it out:</p>
-<pre><code class="language-julia-repl">julia&gt; using Franklin
-julia&gt; newsite&#40;&quot;mySite&quot;, template&#61;&quot;pure-sm&quot;&#41;
-✓ Website folder generated at &quot;mySite&quot; &#40;now the current directory&#41;.
-→ Use serve&#40;&#41; from Franklin to see the website in your browser.
-
-julia&gt; serve&#40;&#41;
-→ Initial full pass...
-→ Starting the server...
-✓ LiveServer listening on http://localhost:8000/ ...
-  &#40;use CTRL&#43;C to shut down&#41;</code></pre>
-<p>If you navigate to that URL in your browser, you will see the website. If you then open <code>index.md</code> in an  editor and modify it at will, the changes will be live rendered in your browser. You can also inspect the file <code>menu1.md</code> which offers more examples of what Franklin can do.</p>
-<h2 id="installing_optional_extras"><a href="#installing_optional_extras" class="header-anchor">Installing optional extras</a></h2>
-<p>Franklin allows a post-processing step to compress HTML and CSS and pre-render code blocks and math environments. This requires a couple of dependencies:</p>
+<div class="blank"></div>
+<div class="franklin-toc"><ol><li><a href="#overview">Overview</a><ol><li><a href="#file_organisation">File organisation</a></li><li><a href="#tricks">Tricks</a></li></ol></li><li><a href="#example">Example</a><ol><li><a href="#script">Script</a></li><li><a href="#result">Result</a></li></ol></li></ol></div>
+<h2 id="overview"><a href="#overview" class="header-anchor">Overview</a></h2>
+<p><a href="https://github.com/fredrikekre/Literate.jl">Literate.jl</a> is a convenient package that allows you to write scripts in Julia and convert them to markdown pages or Jupyter notebooks.</p>
+<p>You can combine this with Franklin with the <code>\literate</code> command which you can call in Franklin like:</p>
+<pre><code class="language-julia">\literate&#123;/_literate/script.jl&#125;</code></pre>
+<p>it does what you expect:</p>
 <div class="tlist"><ul>
-<li><p><a href="https://www.python.org/downloads/"><code>python3</code></a> for the minification of the site,</p>
+<li><p>the markdown is interpreted and evaluated</p>
 </li>
-<li><p><a href="https://nodejs.org/en/"><code>node.js</code></a> for the pre-rendering of KaTeX and code highlighting.</p>
+<li><p>the code blocks are evaluated and their output can be shown selectively</p>
 </li>
 </ul></div>
-<p>You will then need to install <code>highlight.js</code>, which you should do from Julia using the <a href="https://github.com/davidanthoff/NodeJS.jl">NodeJS.jl</a> package:</p>
-<pre><code class="language-julia-repl">julia&gt; using NodeJS
-julia&gt; run&#40;&#96;sudo &#36;&#40;npm_cmd&#40;&#41;&#41; install highlight.js&#96;&#41;</code></pre>
-<p><strong>Note</strong>: a key advantage of using <code>NodeJS</code> for this instead of using <code>npm</code> yourself is that it puts the libraries in the &quot;right place&quot; for Julia to find them.</p>
-<p>Assuming you have <code>python3</code>, Franklin will try to install the python package <a href="https://github.com/juancarlospaco/css-html-js-minify"><code>css_html_js_minify</code></a> if via <code>pip3</code>.</p>
+<p>If you want the script to be shown like a notebook where the output of every code block is shown, use <code>@def showall &#61; true</code>.</p>
+<p>Combining Franklin with Literate offers a very convenient way to write and maintain tutorial websites &#40;see for instance the <a href="https://github.com/alan-turing-institute/DataScienceTutorials.jl">DataScienceTutorials</a>&#41;.</p>
+<h3 id="file_organisation"><a href="#file_organisation" class="header-anchor">File organisation</a></h3>
+<p>We recommend you have a folder <code>/_literate/</code> in your root folder, place your literate scripts there and call them as in the example above.</p>
+<h3 id="tricks"><a href="#tricks" class="header-anchor">Tricks</a></h3>
+<p>In the <code>showall &#61; true</code> mode, the last line of each code block is displayed in full. In some cases you will have to  think about this a bit more than you would in your REPL and might for instance:</p>
+<div class="tlist"><ul>
+<li><p><em>suppress the output</em>, in which case  you should add a <code>;</code>  at the end  of the line</p>
+</li>
+<li><p><em>only show a few elements</em> &#40;see below&#41;</p>
+</li>
+</ul></div>
+<p>For instance you might prefer:</p>
+<pre><code class="language-julia">x &#61; randn&#40;10&#41;
+x&#91;1:3&#93;</code></pre><pre><code class="plaintext">3-element Array{Float64,1}:
+  0.6059850780197029
+ -0.1237186520630764
+ -0.3715195866659733</code></pre>
+<p>to just</p>
+<pre><code class="language-julia">x &#61; randn&#40;10&#41;</code></pre><pre><code class="plaintext">10-element Array{Float64,1}:
+ -0.17507523870574926
+  0.2008215965430326
+ -0.9174315206560613
+  0.2932718945414799
+  0.09901743322367523
+ -0.36751306267265527
+  0.8808567901005072
+  0.2516580824404695
+  0.15261494588360175
+ -0.20267756502924503</code></pre>
+<p>You can also use <code>@show</code> or <code>println</code> to show specific things beyond the last line</p>
+<pre><code class="language-julia">x &#61; rand&#40;10&#41;
+println&#40;sum&#40;x&#41;&#41;
+y &#61; 5</code></pre><pre><code class="plaintext">5.370947421284965
+5</code></pre>
+<p>if the last line is a <code>@show</code> or <code>print</code> then only that is shown:</p>
+<pre><code class="language-julia">x &#61; randn&#40;10&#41;
+@show x&#91;1&#93;</code></pre><pre><code class="plaintext">x[1] = 0.24757156777328385
+</code></pre>
+<h2 id="example"><a href="#example" class="header-anchor">Example</a></h2>
+<h3 id="script"><a href="#script" class="header-anchor">Script</a></h3>
+<pre><code class="language-julia"># Some **really cool** maths:
+#
+# &#36;&#36; \exp&#40;i\pi&#41; &#43; 1 \quad &#61; \quad 0 &#36;&#36;
+#
+# We can show this with some code:
+
+x &#61; exp&#40;im*π&#41; &#43; 1
+
+# that looks close to zero but
+
+x ≈ 0
+
+# however
+
+abs&#40;x&#41; &lt; eps&#40;&#41;
+
+# #### Conclusion
+#
+# The equation is proven thanks to our very rigorous proof.</code></pre>
+<h3 id="result"><a href="#result" class="header-anchor">Result</a></h3>
+<p><p>Some <strong>really cool</strong> maths:</p>
+\[ \exp(i\pi) + 1 \quad = \quad 0 \]
+<p>We can show this with some code:</p>
+<pre><code class="language-julia">x &#61; exp&#40;im*π&#41; &#43; 1</code></pre><pre><code class="plaintext">0.0 + 1.2246467991473532e-16im</code></pre>
+<p>that looks close to zero but</p>
+<pre><code class="language-julia">x ≈ 0</code></pre><pre><code class="plaintext">false</code></pre>
+<p>however</p>
+<pre><code class="language-julia">abs&#40;x&#41; &lt; eps&#40;&#41;</code></pre><pre><code class="plaintext">true</code></pre>
+<h4 id="conclusion"><a href="#conclusion" class="header-anchor">Conclusion</a></h4>
+<p>The equation is proven thanks to our very rigorous proof.</p>
+ </p>
 <div class="page-foot">
   <div class="copyright">
-    &copy; Thibaut Lienart. Last modified: March 14, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Thibaut Lienart. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

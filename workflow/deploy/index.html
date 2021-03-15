@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Un-minified script so that can play a bit -->
+<link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <!-- Syntax highlighting via Prism, note: restricted langs -->
+<link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/jtd.css">
+  <link rel="icon" href="/assets/infra/logoF_square.gif">
+   <title>Deploying your website</title>  
+
+  <!-- LUNR -->
+  <script src="/libs/lunr/lunr.min.js"></script>
+  <script src="/libs/lunr/lunr_index.js"></script>
+  <script src="/libs/lunr/lunrclient.min.js"></script>
+
+  <!-- PLOTLY -->
+  
+
+</head>
+<body>                      <!-- closed in foot.html -->
+  <div class="page-wrap">   <!-- closed in foot.html -->
+    <!-- SIDE BAR -->
+    <div class="side-bar">
+      <div class="header">
+        <a href="/" class="title">
+          <img style="height:60px;" src="/assets/infra/franklin.svg" alt="Canyi Chen" />
+          <style>
+          @media (max-width: 31.25rem){
+            .side-bar .show-menu {height:30px;}
+          }
+          @media (max-width: 50rem) {
+            .side-bar .header .title {padding-top:0; padding-bottom: 0;}
+            .header .title img {height:60px; max-width: 100px !important;}
+          }
+          @media (min-width: 66.5rem){
+            .header .title img {max-width: 140px !important;}
+            
+          }
+          </style>
+        </a>
+      </div>
+      <label for="show-menu" class="show-menu">MENU</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <div class="menu" id="side-menu">
+        <ul class="menu-list">
+          <!-- HOME -->
+          <li class="menu-list-item "><a href="/" class="menu-list-link">• Home</a>
+          <!-- Research -->
+          <li class="menu-list-parent "><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item "><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
+              <li class="menu-list-item "><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
+              </ul>
+          <!-- CV -->
+          <li class="menu-list-parent "><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          <!-- WORKFLOW -->
+          <!--
+		  <li class="menu-list-parent {{ispage workflow/*}}active{{end}}"><a href="/workflow/" class="menu-list-link">• Workflow</a>
+			  <ul class="menu-list-child-list ">
+				<li class="menu-list-item {{ispage workflow/index.html}}active{{end}}"><a href="/workflow/" class="menu-list-link">Create and edit</a>
+				<li class="menu-list-item {{ispage workflow/structure}}active{{end}}"><a href="/workflow/structure/" class="menu-list-link">Page structure</a>
+				<li class="menu-list-item {{ispage workflow/deploy}}active{{end}}"><a href="/workflow/deploy/" class="menu-list-link">Deploy</a>
+				<li class="menu-list-item {{ispage workflow/sitemap-rss}}active{{end}}"><a href="/workflow/sitemap-rss/" class="menu-list-link">Sitemap and RSS</a>
+			  </ul>
+        -->
+          <!-- SYNTAX -->
+          <!-- NOTE: if adding a menu item, add ref to first item! -->
+        <!--
+          <li class="menu-list-parent {{ispage syntax/*}}active{{end}}"><a href="/syntax/markdown/" class="menu-list-link">• Syntax</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage syntax/markdown}}active{{end}}"><a href="/syntax/markdown/" class="menu-list-link">Markdown</a>
+              <li class="menu-list-item {{ispage syntax/divs-commands}}active{{end}}"><a href="/syntax/divs-commands/" class="menu-list-link">Divs and Commands</a>
+              <li class="menu-list-item {{ispage syntax/page-variables}}active{{end}}"><a href="/syntax/page-variables/" class="menu-list-link">Page Variables</a>
+			  <li class="menu-list-item {{ispage syntax/utils}}active{{end}}"><a href="/syntax/utils/" class="menu-list-link">Utils</a>
+            </ul>
+      -->
+		  <!-- STYLING -->
+      <!--
+          <li class="menu-list-parent {{ispage styling/*}}active{{end}}"><a href="/styling/templates/" class="menu-list-link">• Styling</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage styling/templates}}active{{end}}"><a href="/styling/templates/" class="menu-list-link">Templates</a>
+              <li class="menu-list-item {{ispage styling/classes}}active{{end}}"><a href="/styling/classes/" class="menu-list-link">Classes</a>
+            </ul>
+      -->
+          <!-- CODE -->
+          <!--
+          <li class="menu-list-parent {{ispage code/*}}active{{end}}"><a href="/code/" class="menu-list-link">• Code</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage code/index.html}}active{{end}}"><a href="/code/" class="menu-list-link">Inserting code</a>
+              <li class="menu-list-item {{ispage code/eval-tricks}}active{{end}}"><a href="/code/eval-tricks/" class="menu-list-link">Code tricks</a>
+              <li class="menu-list-item {{ispage code/literate}}active{{end}}"><a href="/code/literate/" class="menu-list-link">Literate.jl</a>
+            </ul>
+          -->
+          <!-- Julia -->
+          <!--
+          <li class="menu-list-parent {{ispage julia/*}}active{{end}}"><a href="/julia/" class="menu-list-link">• Julia</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage julia/index.html}}active{{end}}"><a href="/julia/" class="menu-list-link">Scientific Computing</a>
+            </ul>
+          -->
+		  <!-- EXTRAs -->
+      <!--
+		  <li class="menu-list-parent {{ispage extras/*}}active{{end}}"><a href="/extras/" class="menu-list-link">• Extras</a>
+			  <ul class="menu-list-child-list ">
+				<li class="menu-list-item {{ispage extras/index.html}}active{{end}}"><a href="/extras/" class="menu-list-link">Overview</a>
+				<li class="menu-list-item {{ispage extras/lunr}}active{{end}}"><a href="/extras/lunr/" class="menu-list-link">Search with Lunr</a>
+                <li class="menu-list-item {{ispage extras/utterances}}active{{end}}"><a href="/extras/utterances/" class="menu-list-link">Comments with Utterances</a>
+				<li class="menu-list-item {{ispage extras/literate}}active{{end}}"><a href="/extras/literate/" class="menu-list-link">Literate</a>
+				<li class="menu-list-item {{ispage extras/plotly}}active{{end}}"><a href="/extras/plotly/" class="menu-list-link">Plotly</a>
+			  </ul>
+
+      -->
+          <!-- FAQ -->
+        <!-- 
+        <li class="menu-list-parent {{ispage faq/*}}active{{end}}"><a href="/faq/technical/" class="menu-list-link">• FAQ</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage faq/technical}}active{{end}}"><a href="/faq/technical/" class="menu-list-link">Technical</a>
+			        <li class="menu-list-item {{ispage faq/troubleshooting}}active{{end}}"><a href="/faq/troubleshooting/" class="menu-list-link">Troubleshooting</a>
+              <li class="menu-list-item {{ispage faq/why-o-why}}active{{end}}"><a href="/faq/why-o-why/" class="menu-list-link">Meta</a>
+            </ul>
+        </ul>
+        -->
+			<form id="lunrSearchForm" name="lunrSearchForm">
+				<input class="search-input" name="q" placeholder="Enter search term" type="text"> <input type="submit" value="Search" formaction="/search/index.html">
+			</form>
+      </div>
+      <div class="footer">
+        <a href="/faq/why-o-why/"><img style="width:40%;padding-left:10px;margin-bottom:15px;" src="/assets/infra/logoF2.svg" alt="Franklin Logo" /></a>
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="main-content-wrap"> <!-- closed in foot.html -->
+      <div class="main-content" id="focus" tabindex="-1" style="outline:0;">    <!-- closed in foot.html -->
+        <!--
+          <div class="main-header">
+          <a name="pagetop"></a>
+
+          <a id="github" href="https://github.com/tlienart/Franklin.jl/blob/master/docs/{{fd_rpath}}">Page source</a>
+		  <span style="width:30px; text-align: center;color:lightgray;">|</span>
+		  <a id="github" href="https://github.com/tlienart/Franklin.jl">GitHub Repository</a>
+        </div>
+-->
+
+<!-- Content appended here (in class franklin-content) -->
+<div class="franklin-content"><h1 id="deploying_your_website"><a href="#deploying_your_website" class="header-anchor">Deploying your website</a></h1>
+
+    <span style="font-size:24px;font-weight:300;">Set it up once then don't think about it.</span>
+    
+<div class="blank"></div>
+<div class="franklin-toc"><ol><li><a href="#deploying_on_github">Deploying on GitHub</a><ol><li><a href="#creating_a_repo_on_github">Creating a repo on GitHub</a></li><li><a href="#synchronise_your_local_folder">Synchronise your local folder</a></li><li><a href="#examples">Examples</a></li><li><a href="#customising_the_github_action">Customising the GitHub action</a></li><li><a href="#troubleshooting">Troubleshooting</a></li></ol></li><li><a href="#deploying_on_gitlab">Deploying on GitLab</a><ol><li><a href="#creating_a_repo_on_gitlab">Creating a repo on GitLab</a></li><li><a href="#create_and_optimize_your_site">Create and optimize your site</a></li><li><a href="#synchronise_your_local_folder__2">Synchronise your local folder</a></li><li><a href="#iterate">Iterate</a></li></ol></li><li><a href="#deploying_on_netlify">Deploying on Netlify</a></li><li><a href="#previewing_pull_requests">Previewing Pull Requests</a></li></ol></div>
+<div class="blank"></div>
+<p>Deploying the website is trivial on GitHub, Gitlab and services like Netlify.</p>
+<h2 id="deploying_on_github"><a href="#deploying_on_github" class="header-anchor">Deploying on GitHub</a></h2>
+<h3 id="creating_a_repo_on_github"><a href="#creating_a_repo_on_github" class="header-anchor">Creating a repo on GitHub</a></h3>
+<p>Start by creating an empty GitHub repository</p>
+<div class="tlist"><ul>
+<li><p>for a personal &#40;or org&#41; website the repository <strong>must</strong> be named <code>username.github.io</code> &#40;or <code>orgname.github.io</code>&#41; see also <a href="https://pages.github.com/">the github pages docs</a>,</p>
+</li>
+<li><p>for a project website the repo can be named anything you want, let&#39;s say <code>myWebsite</code>.</p>
+</li>
+</ul></div>
+<div class="warning"><div class="title">⚠ Warning&#33;</div>
+<div class="content">When you consider a <em>project website</em>, you <strong>must</strong> define a <code>prepath</code> variable in your <code>config.md</code> with the name of that project. For instance: <code>@def prepath &#61; &quot;myWebsite&quot;</code>.   This is used upon deployment to indicate that the base URL of your website is <code>username.github.io/myWebsite/</code> instead of <code>username.github.io</code>.   If you forget to do that, among other problems the CSS won&#39;t load and your website will look terrible 😅.</div></div>
+<div class="tlist"><ul>
+<li><p><a href="https://github.com/tlienart2/tlienart2.github.io">This repo</a> is an example of <em>user website</em> you can copy,</p>
+</li>
+<li><p><a href="https://github.com/tlienart2/myWebsite">This repo</a> is an example of <em>project website</em> you can copy.</p>
+</li>
+</ul></div>
+<h3 id="synchronise_your_local_folder"><a href="#synchronise_your_local_folder" class="header-anchor">Synchronise your local folder</a></h3>
+<p>You now just need to synchronise your repository and your local website folder; to do so, go to your terminal, <code>cd</code> to the website folder and follow the steps below:</p>
+<div class="tlist"><ul>
+<li><p><code>git init &amp;&amp; git remote add origin URL_TO_YOUR_REPO</code></p>
+</li>
+<li><p><code>git add -A &amp;&amp; git commit -am &quot;initial files&quot;</code></p>
+</li>
+<li><p><code>git push</code></p>
+</li>
+</ul></div>
+<p>the GitHub action will be triggered and deploy the content of the <code>__site</code> folder to  the <code>gh-pages</code> branch from which GitHub will deploy the website.</p>
+<div class="note"><div class="title">⚠ Note</div>
+<div class="content">It takes a couple of minutes for the whole process to complete.</div></div>
+<p>Once a green check mark appears on the GitHub repo like so:</p>
+<p><img src="/assets/img/action_check.png" alt="" /></p>
+<p>your site has finished building and the generated files are on the <code>gh-pages</code> branch. If you see a red cross instead, click on it to see what failed, <em>usually</em> if you manage to build your site locally, the build process should work on GitHub too.</p>
+<p>The final step is to tell GitHub to deploy the <code>gh-pages</code> branch, for this, on the repository go to <code>Settings</code> then scroll down to <code>GitHub Pages</code> and in the <code>Source</code> dropdown, pick <code>gh-pages</code>.</p>
+<p>Your website should now be online. To view it, on the repository page, click on <code>github-pages</code> in the right margin,</p>
+<div class="small-img"><img src="/assets/img/deployment.png" alt="" /></div>
+<p>then on <code>View deployment</code>.</p>
+<div class="small-img"><img src="/assets/img/deployment2.png" alt="" /></div>
+<h3 id="examples"><a href="#examples" class="header-anchor">Examples</a></h3>
+<div class="tlist"><ul>
+<li><p><a href="https://github.com/tlienart2/tlienart2.github.io">basic user webpage</a></p>
+</li>
+<li><p><a href="https://github.com/tlienart2/myWebsite">basic project webpage</a></p>
+</li>
+</ul></div>
+<h3 id="customising_the_github_action"><a href="#customising_the_github_action" class="header-anchor">Customising the GitHub action</a></h3>
+<p>You might want to customise the GitHub action for instance:</p>
+<div class="tlist"><ul>
+<li><p>your website uses <a href="https://github.com/JuliaPy/PyPlot.jl"><code>PyPlot.jl</code></a> and so you need to make sure <a href="https://matplotlib.org/"><code>matplotlib</code></a> is installed,</p>
+</li>
+<li><p>you want to apply some node library such as <a href="https://purgecss.com/"><code>purgecss</code></a></p>
+</li>
+<li><p>you want to disable minification or prerendering</p>
+</li>
+<li><p>...</p>
+</li>
+</ul></div>
+<p>For all such operations, modify the file <code>.github/workflows/deploy.yml</code> in your site folder. It should be fairly straightforward to see how to extend it but if you get stuck, ask on the <strong>#franklin</strong> slack channel.</p>
+<h3 id="troubleshooting"><a href="#troubleshooting" class="header-anchor">Troubleshooting</a></h3>
+<p>If something failed, that you can&#39;t debug, ask on the <strong>#franklin</strong> slack channel explaining what&#39;s the issue and we&#39;ll try to help you out.</p>
+<h2 id="deploying_on_gitlab"><a href="#deploying_on_gitlab" class="header-anchor">Deploying on GitLab</a></h2>
+<h3 id="creating_a_repo_on_gitlab"><a href="#creating_a_repo_on_gitlab" class="header-anchor">Creating a repo on GitLab</a></h3>
+<p>Start by creating an empty GitLab repository</p>
+<div class="tlist"><ul>
+<li><p>for a personal website the repository <strong>must</strong> be named <code>username.gitlab.io</code> see also <a href="https://about.gitlab.com/stages-devops-lifecycle/pages/">the gitlab pages docs</a>,</p>
+</li>
+<li><p>for a project website the repo can be named anything you want.</p>
+</li>
+</ul></div>
+<h3 id="create_and_optimize_your_site"><a href="#create_and_optimize_your_site" class="header-anchor">Create and optimize your site</a></h3>
+<p>As before; before pushing, call <code>optimize&#40;&#41;</code> which will fix all your paths.</p>
+<h3 id="synchronise_your_local_folder__2"><a href="#synchronise_your_local_folder__2" class="header-anchor">Synchronise your local folder</a></h3>
+<p>Now you need to synchronise your repository and your local website folder; to do so, go to your terminal, <code>cd</code> to the website folder and follow the steps below:</p>
+<div class="tlist"><ul>
+<li><p><code>git init &amp;&amp; git remote add origin URL_TO_YOUR_REPO</code></p>
+</li>
+<li><p><code>git add -A &amp;&amp; git commit -am &quot;initial files&quot;</code></p>
+</li>
+</ul></div>
+<p>That&#39;s it&#33; when you push your updates to the <code>master</code> branch, the GitLab CI will copy the <code>__site</code> folder to a virtual <code>public</code> folder and deploy its content.</p>
+<div class="note"><div class="title">⚠ Note</div>
+<div class="content">It takes a couple of minutes for the whole process to complete and your site to be available online.</div></div>
+<h3 id="iterate"><a href="#iterate" class="header-anchor">Iterate</a></h3>
+<p>The <code>publish</code> command does the optimize followed by the git stuff all in one. So  you should probably use that  after the initial setup.</p>
+<h2 id="deploying_on_netlify"><a href="#deploying_on_netlify" class="header-anchor">Deploying on Netlify</a></h2>
+<p>Synchronise your local website folder with a repository &#40;e.g. a GitHub or GitLab repository&#41; then select that repository on Netlify and indicate you want to deploy the <code>__site</code> folder.</p>
+<p>That&#39;s it&#33;</p>
+<h2 id="previewing_pull_requests"><a href="#previewing_pull_requests" class="header-anchor">Previewing Pull Requests</a></h2>
+<p>You can easily visualize the effect of a pull request on your website without having to serve it locally by using Netlify. To do this you need to change a couple of things. Assuming that you use Github Actions to deploy your website, you need to change your <code>deploy.yml</code> file to make builds from PRs. First change:</p>
+<pre><code class="language-yml">name: Build and Deploy
+on:
+  push:
+    branches:
+      - main # or master</code></pre>
+<p>to</p>
+<pre><code class="language-yml">name: Build and Deploy
+on:
+  push:
+    branches:
+      - main # or master
+  pull_request:
+    branches:
+      - main # or master</code></pre>
+<p>This means that each time a PR will be opened, a &quot;preview&quot; website will be generated and updated by the GitHub action.</p>
+<p>Then we need to properly set up a local folder for each website generated by a PR. After the <code>Checkout</code> action add the following:</p>
+<pre><code class="language-yml">- name: Fix URLs for PR preview deployment &#40;pull request previews&#41;
+  if: github.event_name &#61;&#61; &#39;pull_request&#39;
+  run: |
+    echo &quot;PREVIEW_FRANKLIN_WEBSITE_URL&#61;https://&#123;netlify name&#125;.netlify.app/previews/PR&#36;&#123;&#123; github.event.number &#125;&#125;/&quot; &gt;&gt; &#36;GITHUB_ENV
+    echo &quot;PREVIEW_FRANKLIN_PREPATH&#61;previews/PR&#36;&#123;&#123; github.event.number &#125;&#125;&quot; &gt;&gt; &#36;GITHUB_ENV</code></pre>
+<p>where <code>&#123;netlify name&#125;</code> is a name you will decide to use at the end of this explanation. The first line keeps track of the URL where the preview will be available. the second line only keeps track of the &quot;prepath&quot; of that preview URL so that it can be passed to Franklin.</p>
+<p>Finally we want to deploy the main website and the PR preview on different branches &#40;and folders&#41;:</p>
+<pre><code class="language-yml">- name: Deploy &#40;preview&#41;
+if: github.event_name &#61;&#61; &#39;pull_request&#39; &amp;&amp; github.repository &#61;&#61; github.event.pull_request.head.repo.full_name # if this build is a PR build and the PR is NOT from a fork
+uses: JamesIves/github-pages-deploy-action@releases/v3
+with:
+    BRANCH: gh-preview # The branch where the PRs previews are stored
+    FOLDER: __site
+    GITHUB_TOKEN: &#36;&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;
+    TARGET_FOLDER: &quot;previews/PR&#36;&#123;&#123; github.event.number &#125;&#125;&quot; # The website preview is going to be stored in a subfolder
+- name: Deploy &#40;main&#41;
+if: github.event_name &#61;&#61; &#39;push&#39; &amp;&amp; github.ref &#61;&#61; &#39;refs/heads/dev&#39;
+uses: JamesIves/github-pages-deploy-action@releases/v3
+with:
+    GITHUB_TOKEN: &#36;&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;
+    BRANCH: gh-pages # Replace here the branch where your website is deployed
+    FOLDER: __site</code></pre>
+<p>Now to avoid problems with the subfolder structure of our website we need to make a small change to our <code>config.md</code> file. Change the following lines</p>
+<pre><code class="language-julia">@def prepath     &#61; &quot;myprepath&quot; # This is possibly &quot;&quot; for your case
+@def website_url &#61; &quot;mywebsite.github.io&quot;</code></pre>
+<p>to</p>
+<pre><code class="language-julia">@def prepath     &#61; get&#40;ENV, &quot;PREVIEW_FRANKLIN_PREPATH&quot;, &quot;myprepath&quot;&#41; # In the third argument put the prepath you normally use
+@def website_url &#61; get&#40;ENV, &quot;PREVIEW_FRANKLIN_WEBSITE_URL&quot;, &quot;mywebsite.github.io&quot;&#41; # Just put the website name</code></pre>
+<p>Now for the final step, you will need to visualize the obtained previews. Since Github only allow you to deploy one branch, you will need an alternative like Netlify. Create an account on <a href="https://www.netlify.com/">Netlify.com</a>, add your repository and chose the <code>gh-preview</code> branch without any additional settings. Set your netlify website to be <code>&#123;netlify name&#125;.netlify.app</code>.</p>
+<p>Once everything is setup you will be able to visualize your PR preview on <code>&#123;netlify name&#125;.netlify.app/previews/PR&#123;number of your PR&#125;</code>. You can make things easier for your contributors to access it by adding a comment with a link to your PR automatically. To do this add the following Github action &#40;create a <code>pr_comment.yml</code> file in <code>.github/workflows/</code>&#41;:</p>
+<pre><code class="language-yml">name: PR Comment # Write a comment in the PR with a link to the preview of the given website
+on:
+  pull_request:
+    types: &#91;opened, reopened&#93;
+jobs:
+  pr_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create PR comment
+        if: github.event_name &#61;&#61; &#39;pull_request&#39; &amp;&amp; github.repository &#61;&#61; github.event.pull_request.head.repo.full_name # if this is a pull request build AND the pull request is NOT made from a fork
+        uses: thollander/actions-comment-pull-request@71efef56b184328c7ef1f213577c3a90edaa4aff
+        with:
+          message: &#39;Once the build has completed, you can preview your PR at this URL: https://&#123;netlify name&#125;.netlify.app/previews/PR&#36;&#123;&#123; github.event.number &#125;&#125;/&#39;
+          GITHUB_TOKEN: &#36;&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</code></pre>
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Thibaut Lienart. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+    </div> <!-- end of class main-content -->
+    </div> <!-- end of class main-content-wrap -->
+    </div> <!-- end of class page-wrap-->
+    
+      <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+      <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>

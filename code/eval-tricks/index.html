@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Un-minified script so that can play a bit -->
+<link rel="stylesheet" href="/libs/katex/katex.min.css">
+     
+   <!-- Syntax highlighting via Prism, note: restricted langs -->
+<link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/jtd.css">
+  <link rel="icon" href="/assets/infra/logoF_square.gif">
+   <title>Tricks with code evaluation</title>  
+
+  <!-- LUNR -->
+  <script src="/libs/lunr/lunr.min.js"></script>
+  <script src="/libs/lunr/lunr_index.js"></script>
+  <script src="/libs/lunr/lunrclient.min.js"></script>
+
+  <!-- PLOTLY -->
+  
+
+</head>
+<body>                      <!-- closed in foot.html -->
+  <div class="page-wrap">   <!-- closed in foot.html -->
+    <!-- SIDE BAR -->
+    <div class="side-bar">
+      <div class="header">
+        <a href="/" class="title">
+          <img style="height:60px;" src="/assets/infra/franklin.svg" alt="Canyi Chen" />
+          <style>
+          @media (max-width: 31.25rem){
+            .side-bar .show-menu {height:30px;}
+          }
+          @media (max-width: 50rem) {
+            .side-bar .header .title {padding-top:0; padding-bottom: 0;}
+            .header .title img {height:60px; max-width: 100px !important;}
+          }
+          @media (min-width: 66.5rem){
+            .header .title img {max-width: 140px !important;}
+            
+          }
+          </style>
+        </a>
+      </div>
+      <label for="show-menu" class="show-menu">MENU</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <div class="menu" id="side-menu">
+        <ul class="menu-list">
+          <!-- HOME -->
+          <li class="menu-list-item "><a href="/" class="menu-list-link">• Home</a>
+          <!-- Research -->
+          <li class="menu-list-parent "><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item "><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
+              <li class="menu-list-item "><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
+              </ul>
+          <!-- CV -->
+          <li class="menu-list-parent "><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          <!-- WORKFLOW -->
+          <!--
+		  <li class="menu-list-parent {{ispage workflow/*}}active{{end}}"><a href="/workflow/" class="menu-list-link">• Workflow</a>
+			  <ul class="menu-list-child-list ">
+				<li class="menu-list-item {{ispage workflow/index.html}}active{{end}}"><a href="/workflow/" class="menu-list-link">Create and edit</a>
+				<li class="menu-list-item {{ispage workflow/structure}}active{{end}}"><a href="/workflow/structure/" class="menu-list-link">Page structure</a>
+				<li class="menu-list-item {{ispage workflow/deploy}}active{{end}}"><a href="/workflow/deploy/" class="menu-list-link">Deploy</a>
+				<li class="menu-list-item {{ispage workflow/sitemap-rss}}active{{end}}"><a href="/workflow/sitemap-rss/" class="menu-list-link">Sitemap and RSS</a>
+			  </ul>
+        -->
+          <!-- SYNTAX -->
+          <!-- NOTE: if adding a menu item, add ref to first item! -->
+        <!--
+          <li class="menu-list-parent {{ispage syntax/*}}active{{end}}"><a href="/syntax/markdown/" class="menu-list-link">• Syntax</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage syntax/markdown}}active{{end}}"><a href="/syntax/markdown/" class="menu-list-link">Markdown</a>
+              <li class="menu-list-item {{ispage syntax/divs-commands}}active{{end}}"><a href="/syntax/divs-commands/" class="menu-list-link">Divs and Commands</a>
+              <li class="menu-list-item {{ispage syntax/page-variables}}active{{end}}"><a href="/syntax/page-variables/" class="menu-list-link">Page Variables</a>
+			  <li class="menu-list-item {{ispage syntax/utils}}active{{end}}"><a href="/syntax/utils/" class="menu-list-link">Utils</a>
+            </ul>
+      -->
+		  <!-- STYLING -->
+      <!--
+          <li class="menu-list-parent {{ispage styling/*}}active{{end}}"><a href="/styling/templates/" class="menu-list-link">• Styling</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage styling/templates}}active{{end}}"><a href="/styling/templates/" class="menu-list-link">Templates</a>
+              <li class="menu-list-item {{ispage styling/classes}}active{{end}}"><a href="/styling/classes/" class="menu-list-link">Classes</a>
+            </ul>
+      -->
+          <!-- CODE -->
+          <!--
+          <li class="menu-list-parent {{ispage code/*}}active{{end}}"><a href="/code/" class="menu-list-link">• Code</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage code/index.html}}active{{end}}"><a href="/code/" class="menu-list-link">Inserting code</a>
+              <li class="menu-list-item {{ispage code/eval-tricks}}active{{end}}"><a href="/code/eval-tricks/" class="menu-list-link">Code tricks</a>
+              <li class="menu-list-item {{ispage code/literate}}active{{end}}"><a href="/code/literate/" class="menu-list-link">Literate.jl</a>
+            </ul>
+          -->
+          <!-- Julia -->
+          <!--
+          <li class="menu-list-parent {{ispage julia/*}}active{{end}}"><a href="/julia/" class="menu-list-link">• Julia</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage julia/index.html}}active{{end}}"><a href="/julia/" class="menu-list-link">Scientific Computing</a>
+            </ul>
+          -->
+		  <!-- EXTRAs -->
+      <!--
+		  <li class="menu-list-parent {{ispage extras/*}}active{{end}}"><a href="/extras/" class="menu-list-link">• Extras</a>
+			  <ul class="menu-list-child-list ">
+				<li class="menu-list-item {{ispage extras/index.html}}active{{end}}"><a href="/extras/" class="menu-list-link">Overview</a>
+				<li class="menu-list-item {{ispage extras/lunr}}active{{end}}"><a href="/extras/lunr/" class="menu-list-link">Search with Lunr</a>
+                <li class="menu-list-item {{ispage extras/utterances}}active{{end}}"><a href="/extras/utterances/" class="menu-list-link">Comments with Utterances</a>
+				<li class="menu-list-item {{ispage extras/literate}}active{{end}}"><a href="/extras/literate/" class="menu-list-link">Literate</a>
+				<li class="menu-list-item {{ispage extras/plotly}}active{{end}}"><a href="/extras/plotly/" class="menu-list-link">Plotly</a>
+			  </ul>
+
+      -->
+          <!-- FAQ -->
+        <!-- 
+        <li class="menu-list-parent {{ispage faq/*}}active{{end}}"><a href="/faq/technical/" class="menu-list-link">• FAQ</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage faq/technical}}active{{end}}"><a href="/faq/technical/" class="menu-list-link">Technical</a>
+			        <li class="menu-list-item {{ispage faq/troubleshooting}}active{{end}}"><a href="/faq/troubleshooting/" class="menu-list-link">Troubleshooting</a>
+              <li class="menu-list-item {{ispage faq/why-o-why}}active{{end}}"><a href="/faq/why-o-why/" class="menu-list-link">Meta</a>
+            </ul>
+        </ul>
+        -->
+			<form id="lunrSearchForm" name="lunrSearchForm">
+				<input class="search-input" name="q" placeholder="Enter search term" type="text"> <input type="submit" value="Search" formaction="/search/index.html">
+			</form>
+      </div>
+      <div class="footer">
+        <a href="/faq/why-o-why/"><img style="width:40%;padding-left:10px;margin-bottom:15px;" src="/assets/infra/logoF2.svg" alt="Franklin Logo" /></a>
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="main-content-wrap"> <!-- closed in foot.html -->
+      <div class="main-content" id="focus" tabindex="-1" style="outline:0;">    <!-- closed in foot.html -->
+        <!--
+          <div class="main-header">
+          <a name="pagetop"></a>
+
+          <a id="github" href="https://github.com/tlienart/Franklin.jl/blob/master/docs/{{fd_rpath}}">Page source</a>
+		  <span style="width:30px; text-align: center;color:lightgray;">|</span>
+		  <a id="github" href="https://github.com/tlienart/Franklin.jl">GitHub Repository</a>
+        </div>
+-->
+
+<!-- Content appended here (in class franklin-content) -->
+<div class="franklin-content"><h1 id="tricks_with_code_evaluation"><a href="#tricks_with_code_evaluation" class="header-anchor">Tricks with code evaluation</a></h1>
+
+    <span style="font-size:24px;font-weight:300;">Franklin's recursive nature coupled with code evaluation allows for neat and useful tricks.</span>
+    
+<div class="blank"></div>
+<div class="franklin-toc"><ol><li><a href="#generating_a_table">Generating a table</a><ol><li><a href="#preview">Preview</a></li><li><a href="#code">Code</a></li></ol></li><li><a href="#colourful_circles">Colourful circles</a><ol><li><a href="#preview__2">Preview</a></li><li><a href="#code__2">Code</a></li></ol></li><li><a href="#team_cards">Team cards</a><ol><li><a href="#preview__3">Preview</a></li><li><a href="#code__3">Code</a></li></ol></li><li><a href="#python_code_blocks">Python code blocks</a><ol><li><a href="#code__4">Code</a></li></ol></li></ol></div>
+<p>The basic idea is to exploit the fact that the output of a Julia code block evaluated by Franklin can be re-processed as Franklin Markdow when using the <code>\textoutput</code> command; this offers a wide range of possibilities best shown through a few examples &#40;more or less in increasing degree of sophistication&#41;.</p>
+<h2 id="generating_a_table"><a href="#generating_a_table" class="header-anchor">Generating a table</a></h2>
+<h3 id="preview"><a href="#preview" class="header-anchor">Preview</a></h3>
+
+<div class="simple-table"><table><tr><th align="left">Name</th><th align="left">Number</th></tr><tr><td align="left">Taimur</td><td align="left">1525</td></tr><tr><td align="left">Catherine</td><td align="left">5134</td></tr><tr><td align="left">Maria</td><td align="left">4214</td></tr><tr><td align="left">Arvind</td><td align="left">9019</td></tr><tr><td align="left">Jose</td><td align="left">8918</td></tr><tr><td align="left">Minjie</td><td align="left">5757</td></tr></table></div></p>
+<p>
+<style>
+.simple-table tr {
+  padding:0;
+  line-height:1em;
+}
+</style>
+
+<h3 id="code"><a href="#code" class="header-anchor">Code</a></h3>
+<p>That can be obtained with:</p>
+<pre><code class="language-plaintext">&#96;&#96;&#96;julia:table
+#hideall
+names &#61; &#40;:Taimur, :Catherine, :Maria, :Arvind, :Jose, :Minjie&#41;
+numbers &#61; &#40;1525, 5134, 4214, 9019, 8918, 5757&#41;
+println&#40;&quot;Name | Number&quot;&#41;
+println&#40;&quot;:--- | :---&quot;&#41;
+println.&#40;&quot;&#36;name | &#36;number&quot; for &#40;name, number&#41; in zip&#40;names, numbers&#41;&#41;
+&#96;&#96;&#96;
+
+\textoutput&#123;table&#125;</code></pre>
+<p>The code block will be executed and not shown &#40;<code>#hideall</code>&#41; generating a table line by line. In practice, the code generates the markdown</p>
+<pre><code class="language-markdown">Name | Number
+:--- | :---
+Bob | 1525
+...
+Minjie | 5757</code></pre>
+<p>which is captured and reprocessed by the <code>\textoutput</code> command.</p>
+<p>This can be used effectively when combined with reading data files etc. and of course you could do further CSS styling of the table.</p>
+<h2 id="colourful_circles"><a href="#colourful_circles" class="header-anchor">Colourful circles</a></h2>
+<p>The trick can be used to generate SVG code too.</p>
+<h3 id="preview__2"><a href="#preview__2" class="header-anchor">Preview</a></h3>
+
+<div class="ccols"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" pink"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" lightpink"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" hotpink"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" deeppink"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" mediumvioletred"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" palevioletred"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" coral"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" tomato"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" orangered"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" darkorange"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" orange"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" gold"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 4"><circle cx="2" cy="2" r="1.5" fill=" yellow"/></svg></div>
+<h3 id="code__2"><a href="#code__2" class="header-anchor">Code</a></h3>
+<p>That can obtained with &#40;see detailed explanations further below&#41;</p>
+<pre><code class="language-html">\newcommand&#123;\circle&#125;&#91;1&#93;&#123;
+  ~~~
+  &lt;svg xmlns&#61;&quot;http://www.w3.org/2000/svg&quot; viewBox&#61;&quot;0 0 4 4&quot;&gt;
+  &lt;circle cx&#61;&quot;2&quot; cy&#61;&quot;2&quot; r&#61;&quot;1.5&quot; fill&#61;&quot;#1&quot;/&gt;&lt;/svg&gt;
+  ~~~
+&#125;</code></pre>
+<p>and</p>
+<pre><code class="language-plaintext">&#96;&#96;&#96;julia:circles
+#hideall
+colors&#61;&#40;:pink, :lightpink, :hotpink, :deeppink,
+        :mediumvioletred, :palevioletred, :coral,
+        :tomato, :orangered, :darkorange, :orange,
+        :gold, :yellow&#41;
+print&#40;&quot;@@ccols &quot;&#41;
+print.&#40;&quot;\\circle&#123;&#36;c&#125;&quot; for c in colors&#41;
+println&#40;&quot;@@&quot;&#41;
+&#96;&#96;&#96;
+\textoutput&#123;circles&#125;</code></pre>
+<p>The first part defines a command <code>\circle</code> which takes one argument for the fill colour and inserts SVG code for a circle with that colour.</p>
+<p>The second part is a Julia code block which will be evaluated but not displayed on the page &#40;since there is a <code>#hideall</code>&#41;. The code loops over the each colour <code>c</code> and prints <code>\circle&#123;c&#125;</code> so that the code block effectively generates:</p>
+<pre><code class="language-plaintext">@@ccols \circle&#123;pink&#125;...\circle&#123;yellow&#125;@@</code></pre>
+<p>this output is then captured and reprocessed with the <code>\textoutput&#123;snippet&#125;</code> command.</p>
+<p>The last thing to do is to style the <code>colors</code> div appropriately:</p>
+<pre><code class="language-css">.ccols &#123;
+  margin-top:1.5em;
+  margin-bottom:1.5em;
+  margin-left:auto;
+  margin-right:auto;
+  width: 60&#37;;
+  text-align: center;&#125;
+.ccols svg &#123;
+  width:30px;&#125;</code></pre>
+<h2 id="team_cards"><a href="#team_cards" class="header-anchor">Team cards</a></h2>
+<p>You may want to have a page with responsive team cards for instance where every card would follow the same layout but the content would be different. There are multiple ways you can do this with Franklin and a simple one below &#40;adapted from <a href="https://www.w3schools.com/howto/howto_css_team.asp">this tutorial</a>&#41;. The advantage of doing something like this is that it can help separate the content from the layout making both arguably easier more maintainable.</p>
+<h3 id="preview__3"><a href="#preview__3" class="header-anchor">Preview</a></h3>
+
+<div class="cards"><div class="row"><div class="column"><div class="card"><p><img src="/assets/img/team/beth.jpg" alt=" Jane Doe" /></p>
+<div class="container"><h2> Jane Doe</h2>
+      
+<div class="title">CEO &amp; Founder</div>
+<div class="vitae">Phasellus eget enim eu lectus faucibus vestibulum</div>
+<div class="email">example@example.com</div>
+ 
+      <p><button class="button">Contact</button></p></div></div></div>
+<div class="column"><div class="card"><p><img src="/assets/img/team/rick.jpg" alt=" Mike Ross" /></p>
+<div class="container"><h2> Mike Ross</h2>
+      
+<div class="title">Art Director</div>
+<div class="vitae">Phasellus eget enim eu lectus faucibus vestibulum</div>
+<div class="email">example@example.com</div>
+ 
+      <p><button class="button">Contact</button></p></div></div></div>
+<div class="column"><div class="card"><p><img src="/assets/img/team/meseeks.jpg" alt=" John Doe" /></p>
+<div class="container"><h2> John Doe</h2>
+      
+<div class="title">Designer</div>
+<div class="vitae">Phasellus eget enim eu lectus faucibus vestibulum</div>
+<div class="email">example@example.com</div>
+ 
+      <p><button class="button">Contact</button></p></div></div></div></div></div></p>
+<p>
+<style>
+.column {
+  float:left;
+  width:30%;
+  margin-bottom:16px;
+  padding:0 8px;
+}
+@media (max-width:62rem) {
+  .column {
+    width:45%;
+    display:block;
+  }
+}
+@media (max-width:30rem){
+  .column {
+    width:95%;
+    display:block;
+  }
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.card img {
+  padding-left:0;
+  width: 100%;
+}
+.container {
+  padding: 0 16px;
+}
+.container::after, .row::after{
+  content:"";
+  clear:both;
+  display:table;
+}
+.title {
+  color:grey;
+}
+.vitae {
+  margin-top:0.5em;
+}
+.email {
+  font-family:courier;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+}
+.button{
+  border:none;
+  outline:0;
+  display:inline-block;
+  padding:8px;
+  color:white;
+  background-color:#000;
+  text-align:center;
+  cursor:pointer;
+  width:100%;
+}
+.button:hover{
+  background-color:#555;
+}
+</style>
+
+<h3 id="code__3"><a href="#code__3" class="header-anchor">Code</a></h3>
+<p>In order to do this you could first define a <code>\card</code> command:</p>
+<pre><code class="language-html">\newcommand&#123;\card&#125;&#91;5&#93;&#123;
+  @@card
+    &#33;&#91;#1&#93;&#40;/assets/img/team/&#33;#2.jpg&#41;
+    @@container
+      ~~~
+      &lt;h2&gt;#1&lt;/h2&gt;
+      ~~~
+      @@title #3 @@
+      @@vitae #4 @@
+      @@email #5 @@
+      ~~~
+      &lt;p&gt;&lt;button class&#61;&quot;button&quot;&gt;Contact&lt;/button&gt;&lt;/p&gt;
+      ~~~
+    @@
+  @@
+&#125;</code></pre>
+<p>And then use it in a loop that goes over each person:</p>
+<pre><code class="language-plaintext">&#96;&#96;&#96;julia:teamcards
+#hideall
+team &#61; &#91;
+  &#40;name&#61;&quot;Jane Doe&quot;, pic&#61;&quot;beth&quot;, title&#61;&quot;CEO &amp; Founder&quot;, vitae&#61;&quot;Phasellus eget enim eu lectus faucibus vestibulum&quot;, email&#61;&quot;example@example.com&quot;&#41;,
+  &#40;name&#61;&quot;Mike Ross&quot;, pic&#61;&quot;rick&quot;, title&#61;&quot;Art Director&quot;, vitae&#61;&quot;Phasellus eget enim eu lectus faucibus vestibulum&quot;, email&#61;&quot;example@example.com&quot;&#41;,
+  &#40;name&#61;&quot;John Doe&quot;, pic&#61;&quot;meseeks&quot;, title&#61;&quot;Designer&quot;, vitae&#61;&quot;Phasellus eget enim eu lectus faucibus vestibulum&quot;, email&#61;&quot;example@example.com&quot;&#41;
+  &#93;
+
+&quot;@@cards @@row&quot; |&gt; println
+for person in team
+  &quot;&quot;&quot;
+  @@column
+    \\card&#123;&#36;&#40;person.name&#41;&#125;&#123;&#36;&#40;person.pic&#41;&#125;&#123;&#36;&#40;person.title&#41;&#125;&#123;&#36;&#40;person.vitae&#41;&#125;&#123;&#36;&#40;person.email&#41;&#125;
+  @@
+  &quot;&quot;&quot; |&gt; println
+end
+println&#40;&quot;@@ @@&quot;&#41; # end of cards &#43; row
+&#96;&#96;&#96;
+
+\textoutput&#123;teamcards&#125;</code></pre>
+<p>That&#39;s about it&#33; though of course a bit of CSS styling is needed such as:</p>
+<pre><code class="language-css">.column &#123;
+  float:left;
+  width:30&#37;;
+  margin-bottom:16px;
+  padding:0 8px; &#125;
+@media &#40;max-width:62rem&#41; &#123;
+  .column &#123;
+    width:45&#37;;
+    display:block; &#125;
+  &#125;
+@media &#40;max-width:30rem&#41;&#123;
+  .column &#123;
+    width:95&#37;;
+    display:block;&#125;
+  &#125;
+.card &#123; box-shadow: 0 4px 8px 0 rgba&#40;0,0,0,0.2&#41;; &#125;
+.card img &#123;
+  padding-left:0;
+  width: 100&#37;; &#125;
+.container &#123; padding: 0 16px; &#125;
+.container::after, .row::after&#123;
+  content: &quot;&quot;;
+  clear: both;
+  display: table; &#125;
+.title &#123; color: grey; &#125;
+.vitae &#123; margin-top: 0.5em; &#125;
+.email &#123;
+  font-family: courier;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em; &#125;
+.button&#123;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100&#37;; &#125;
+.button:hover&#123; background-color: #555; &#125;</code></pre>
+<h2 id="python_code_blocks"><a href="#python_code_blocks" class="header-anchor">Python code blocks</a></h2>
+<p>Using <a href="https://github.com/JuliaPy/PyCall.jl">PyCall.jl</a> you can evaluate Python code in Julia, and so you can do that in Franklin too. The code below could definitely be improved and generalised but the point here is to show how things can work together. You could adapt this to work with something like <a href="https://github.com/JuliaInterop/RCall.jl">RCall.jl</a> as well.</p>
+</p>
+<pre><code class="language-python">import numpy as np
+np.random.seed&#40;2&#41;
+x &#61; np.random.randn&#40;5&#41;
+r &#61; np.linalg.norm&#40;x&#41; / len&#40;x&#41;
+np.round&#40;r, 2&#41;</code></pre>
+<p><pre><code class="plaintext">Failed to precompile PyCall [438e738f-606a-5dbb-bf0a-cddfbfd45ab0] to /Users/chencanyi/.julia/compiled/v1.5/PyCall/GkzkC_JrJ55.ji.
+</code></pre>
+<h3 id="code__4"><a href="#code__4" class="header-anchor">Code</a></h3>
+<p>We first define a <code>\pycode</code> command that takes lines of python code, adds a <code>res &#61;</code> before the last line, runs the lines and finally show <code>res</code>. It also inputs the lines of code in a fenced block.</p>
+<pre><code class="language-plaintext">\newcommand&#123;\pycode&#125;&#91;2&#93;&#123;
+&#96;&#96;&#96;julia:&#33;#1
+#hideall
+using PyCall
+lines &#61; replace&#40;&quot;&quot;&quot;&#33;#2&quot;&quot;&quot;, r&quot;&#40;^|\n&#41;&#40;&#91;^\n&#93;&#43;&#41;\n?&#36;&quot; &#61;&gt; s&quot;\1res &#61; \2&quot;&#41;
+py&quot;&quot;&quot;
+&#36;&#36;lines
+&quot;&quot;&quot;
+println&#40;py&quot;res&quot;&#41;
+&#96;&#96;&#96;
+&#96;&#96;&#96;python
+#2
+&#96;&#96;&#96;
+\codeoutput&#123;&#33;#1&#125;
+&#125;</code></pre>
+<p>calling the command is straightforward:</p>
+<pre><code class="language-julia">\pycode&#123;py1&#125;&#123;
+  import numpy as np
+  np.random.seed&#40;2&#41;
+  x &#61; np.random.randn&#40;5&#41;
+  r &#61; np.linalg.norm&#40;x&#41; / len&#40;x&#41;
+  np.round&#40;r, 2&#41;
+&#125;</code></pre>
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Thibaut Lienart. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+    </div> <!-- end of class main-content -->
+    </div> <!-- end of class main-content-wrap -->
+    </div> <!-- end of class page-wrap-->
+    
+      <script src="/libs/katex/katex.min.js"></script>
+<script src="/libs/katex/auto-render.min.js"></script>
+<script>renderMathInElement(document.body)</script>
+
+    
+    
+      <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>
