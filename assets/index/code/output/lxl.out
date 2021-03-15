@@ -1,0 +1,3 @@
+ArgumentError: Package Latexfy not found in current path:
+- Run `import Pkg; Pkg.add("Latexfy")` to install the Latexfy package.
+

@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="/libs/highlight/github.min.css">
    
   <link rel="stylesheet" href="/css/jtd.css">
+  <link rel="stylesheet" href="/css/extras.css"> <!-- add support for stylized outputs of the code-->
   <link rel="icon" href="/assets/infra/logoF_square.gif">
    <title>Divs and Commands</title>  
 
@@ -51,13 +52,18 @@
           <!-- HOME -->
           <li class="menu-list-item "><a href="/" class="menu-list-link">• Home</a>
           <!-- Research -->
-          <li class="menu-list-parent "><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
+          <!--
+
+          <li class="menu-list-parent {{ispage research/*}}active{{end}}"><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
             <ul class="menu-list-child-list ">
-              <li class="menu-list-item "><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
-              <li class="menu-list-item "><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
+              <li class="menu-list-item {{ispage research/publications_by_year/}}active{{end}}"><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
+              <li class="menu-list-item {{ispage research/publications_by_topic/}}active{{end}}"><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
               </ul>
+          -->
           <!-- CV -->
-          <li class="menu-list-parent "><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          <!--
+            <li class="menu-list-parent {{ispage cv/*}}active{{end}}"><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          -->
           <!-- WORKFLOW -->
           <!--
 		  <li class="menu-list-parent {{ispage workflow/*}}active{{end}}"><a href="/workflow/" class="menu-list-link">• Workflow</a>
@@ -309,9 +315,34 @@ and you can refer to it in the text: equation \eqref&#123;a cool equation&#125;.
 <p>Note also that all section headers are anchor points for instance</p>
 <pre><code class="language-plaintext">### Some subtitle</code></pre>
 <p>can be linked to with <code>#some-subtitle</code>. If there are multiple headers with the same name, the second and subsequent ones can be referred to with <code>#some-subtitle__2</code>, <code>#some-subtitle__3</code> etc. &#40;note the double underscore&#41;.</p>
+
+<!-- For disqus -->
+
+
+  <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://canyi-chen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
 <div class="page-foot">
   <div class="copyright">
-    &copy; Thibaut Lienart. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Canyi Chen. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->

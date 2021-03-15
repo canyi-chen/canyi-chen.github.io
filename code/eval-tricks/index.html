@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <!-- Un-minified script so that can play a bit -->
-<link rel="stylesheet" href="/libs/katex/katex.min.css">
-     
+  
    <!-- Syntax highlighting via Prism, note: restricted langs -->
 <link rel="stylesheet" href="/libs/highlight/github.min.css">
    
   <link rel="stylesheet" href="/css/jtd.css">
+  <link rel="stylesheet" href="/css/extras.css"> <!-- add support for stylized outputs of the code-->
   <link rel="icon" href="/assets/infra/logoF_square.gif">
    <title>Tricks with code evaluation</title>  
 
@@ -51,13 +50,18 @@
           <!-- HOME -->
           <li class="menu-list-item "><a href="/" class="menu-list-link">• Home</a>
           <!-- Research -->
-          <li class="menu-list-parent "><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
+          <!--
+
+          <li class="menu-list-parent {{ispage research/*}}active{{end}}"><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
             <ul class="menu-list-child-list ">
-              <li class="menu-list-item "><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
-              <li class="menu-list-item "><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
+              <li class="menu-list-item {{ispage research/publications_by_year/}}active{{end}}"><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
+              <li class="menu-list-item {{ispage research/publications_by_topic/}}active{{end}}"><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
               </ul>
+          -->
           <!-- CV -->
-          <li class="menu-list-parent "><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          <!--
+            <li class="menu-list-parent {{ispage cv/*}}active{{end}}"><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          -->
           <!-- WORKFLOW -->
           <!--
 		  <li class="menu-list-parent {{ispage workflow/*}}active{{end}}"><a href="/workflow/" class="menu-list-link">• Workflow</a>
@@ -431,20 +435,40 @@ println&#40;py&quot;res&quot;&#41;
   r &#61; np.linalg.norm&#40;x&#41; / len&#40;x&#41;
   np.round&#40;r, 2&#41;
 &#125;</code></pre>
+
+<!-- For disqus -->
+
+
+  <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://canyi-chen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
 <div class="page-foot">
   <div class="copyright">
-    &copy; Thibaut Lienart. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+    &copy; Canyi Chen. Last modified: March 08, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
   </div>
 </div>
 </div><!-- CONTENT ENDS HERE -->
     </div> <!-- end of class main-content -->
     </div> <!-- end of class main-content-wrap -->
     </div> <!-- end of class page-wrap-->
-    
-      <script src="/libs/katex/katex.min.js"></script>
-<script src="/libs/katex/auto-render.min.js"></script>
-<script>renderMathInElement(document.body)</script>
-
     
     
       <script src="/libs/highlight/highlight.pack.js"></script>

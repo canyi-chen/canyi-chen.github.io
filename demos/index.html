@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <!-- Syntax highlighting via Prism, note: restricted langs -->
+<link rel="stylesheet" href="/libs/highlight/github.min.css">
+   
+  <link rel="stylesheet" href="/css/jtd.css">
+  <link rel="stylesheet" href="/css/extras.css"> <!-- add support for stylized outputs of the code-->
+  <link rel="icon" href="/assets/infra/logoF_square.gif">
+   <title>Franklin FAQ</title>  
+
+  <!-- LUNR -->
+  <script src="/libs/lunr/lunr.min.js"></script>
+  <script src="/libs/lunr/lunr_index.js"></script>
+  <script src="/libs/lunr/lunrclient.min.js"></script>
+
+  <!-- PLOTLY -->
+  
+
+</head>
+<body>                      <!-- closed in foot.html -->
+  <div class="page-wrap">   <!-- closed in foot.html -->
+    <!-- SIDE BAR -->
+    <div class="side-bar">
+      <div class="header">
+        <a href="/" class="title">
+          <img style="height:60px;" src="/assets/infra/franklin.svg" alt="Canyi Chen" />
+          <style>
+          @media (max-width: 31.25rem){
+            .side-bar .show-menu {height:30px;}
+          }
+          @media (max-width: 50rem) {
+            .side-bar .header .title {padding-top:0; padding-bottom: 0;}
+            .header .title img {height:60px; max-width: 100px !important;}
+          }
+          @media (min-width: 66.5rem){
+            .header .title img {max-width: 140px !important;}
+            
+          }
+          </style>
+        </a>
+      </div>
+      <label for="show-menu" class="show-menu">MENU</label>
+      <input type="checkbox" id="show-menu" role="button">
+      <div class="menu" id="side-menu">
+        <ul class="menu-list">
+          <!-- HOME -->
+          <li class="menu-list-item "><a href="/" class="menu-list-link">• Home</a>
+          <!-- Research -->
+          <!--
+
+          <li class="menu-list-parent {{ispage research/*}}active{{end}}"><a href="/research/publications_by_year/" class="menu-list-link">• Research</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage research/publications_by_year/}}active{{end}}"><a href="/research/publications_by_year" class="menu-list-link">Publications by year</a>
+              <li class="menu-list-item {{ispage research/publications_by_topic/}}active{{end}}"><a href="/research/publications_by_topic" class="menu-list-link">Publications by topic</a>
+              </ul>
+          -->
+          <!-- CV -->
+          <!--
+            <li class="menu-list-parent {{ispage cv/*}}active{{end}}"><a href="/cv/cv/" class="menu-list-link">• CV</a>
+          -->
+          <!-- WORKFLOW -->
+          <!--
+		  <li class="menu-list-parent {{ispage workflow/*}}active{{end}}"><a href="/workflow/" class="menu-list-link">• Workflow</a>
+			  <ul class="menu-list-child-list ">
+				<li class="menu-list-item {{ispage workflow/index.html}}active{{end}}"><a href="/workflow/" class="menu-list-link">Create and edit</a>
+				<li class="menu-list-item {{ispage workflow/structure}}active{{end}}"><a href="/workflow/structure/" class="menu-list-link">Page structure</a>
+				<li class="menu-list-item {{ispage workflow/deploy}}active{{end}}"><a href="/workflow/deploy/" class="menu-list-link">Deploy</a>
+				<li class="menu-list-item {{ispage workflow/sitemap-rss}}active{{end}}"><a href="/workflow/sitemap-rss/" class="menu-list-link">Sitemap and RSS</a>
+			  </ul>
+        -->
+          <!-- SYNTAX -->
+          <!-- NOTE: if adding a menu item, add ref to first item! -->
+        <!--
+          <li class="menu-list-parent {{ispage syntax/*}}active{{end}}"><a href="/syntax/markdown/" class="menu-list-link">• Syntax</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage syntax/markdown}}active{{end}}"><a href="/syntax/markdown/" class="menu-list-link">Markdown</a>
+              <li class="menu-list-item {{ispage syntax/divs-commands}}active{{end}}"><a href="/syntax/divs-commands/" class="menu-list-link">Divs and Commands</a>
+              <li class="menu-list-item {{ispage syntax/page-variables}}active{{end}}"><a href="/syntax/page-variables/" class="menu-list-link">Page Variables</a>
+			  <li class="menu-list-item {{ispage syntax/utils}}active{{end}}"><a href="/syntax/utils/" class="menu-list-link">Utils</a>
+            </ul>
+      -->
+		  <!-- STYLING -->
+      <!--
+          <li class="menu-list-parent {{ispage styling/*}}active{{end}}"><a href="/styling/templates/" class="menu-list-link">• Styling</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage styling/templates}}active{{end}}"><a href="/styling/templates/" class="menu-list-link">Templates</a>
+              <li class="menu-list-item {{ispage styling/classes}}active{{end}}"><a href="/styling/classes/" class="menu-list-link">Classes</a>
+            </ul>
+      -->
+          <!-- CODE -->
+          <!--
+          <li class="menu-list-parent {{ispage code/*}}active{{end}}"><a href="/code/" class="menu-list-link">• Code</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage code/index.html}}active{{end}}"><a href="/code/" class="menu-list-link">Inserting code</a>
+              <li class="menu-list-item {{ispage code/eval-tricks}}active{{end}}"><a href="/code/eval-tricks/" class="menu-list-link">Code tricks</a>
+              <li class="menu-list-item {{ispage code/literate}}active{{end}}"><a href="/code/literate/" class="menu-list-link">Literate.jl</a>
+            </ul>
+          -->
+          <!-- Julia -->
+          <!--
+          <li class="menu-list-parent {{ispage julia/*}}active{{end}}"><a href="/julia/" class="menu-list-link">• Julia</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage julia/index.html}}active{{end}}"><a href="/julia/" class="menu-list-link">Scientific Computing</a>
+            </ul>
+          -->
+		  <!-- EXTRAs -->
+      <!--
+		  <li class="menu-list-parent {{ispage extras/*}}active{{end}}"><a href="/extras/" class="menu-list-link">• Extras</a>
+			  <ul class="menu-list-child-list ">
+				<li class="menu-list-item {{ispage extras/index.html}}active{{end}}"><a href="/extras/" class="menu-list-link">Overview</a>
+				<li class="menu-list-item {{ispage extras/lunr}}active{{end}}"><a href="/extras/lunr/" class="menu-list-link">Search with Lunr</a>
+                <li class="menu-list-item {{ispage extras/utterances}}active{{end}}"><a href="/extras/utterances/" class="menu-list-link">Comments with Utterances</a>
+				<li class="menu-list-item {{ispage extras/literate}}active{{end}}"><a href="/extras/literate/" class="menu-list-link">Literate</a>
+				<li class="menu-list-item {{ispage extras/plotly}}active{{end}}"><a href="/extras/plotly/" class="menu-list-link">Plotly</a>
+			  </ul>
+
+      -->
+          <!-- FAQ -->
+        <!-- 
+        <li class="menu-list-parent {{ispage faq/*}}active{{end}}"><a href="/faq/technical/" class="menu-list-link">• FAQ</a>
+            <ul class="menu-list-child-list ">
+              <li class="menu-list-item {{ispage faq/technical}}active{{end}}"><a href="/faq/technical/" class="menu-list-link">Technical</a>
+			        <li class="menu-list-item {{ispage faq/troubleshooting}}active{{end}}"><a href="/faq/troubleshooting/" class="menu-list-link">Troubleshooting</a>
+              <li class="menu-list-item {{ispage faq/why-o-why}}active{{end}}"><a href="/faq/why-o-why/" class="menu-list-link">Meta</a>
+            </ul>
+        </ul>
+        -->
+			<form id="lunrSearchForm" name="lunrSearchForm">
+				<input class="search-input" name="q" placeholder="Enter search term" type="text"> <input type="submit" value="Search" formaction="/search/index.html">
+			</form>
+      </div>
+      <div class="footer">
+        <a href="/faq/why-o-why/"><img style="width:40%;padding-left:10px;margin-bottom:15px;" src="/assets/infra/logoF2.svg" alt="Franklin Logo" /></a>
+      </div>
+    </div>
+    <!-- CONTENT -->
+    <div class="main-content-wrap"> <!-- closed in foot.html -->
+      <div class="main-content" id="focus" tabindex="-1" style="outline:0;">    <!-- closed in foot.html -->
+        <!--
+          <div class="main-header">
+          <a name="pagetop"></a>
+
+          <a id="github" href="https://github.com/tlienart/Franklin.jl/blob/master/docs/{{fd_rpath}}">Page source</a>
+		  <span style="width:30px; text-align: center;color:lightgray;">|</span>
+		  <a id="github" href="https://github.com/tlienart/Franklin.jl">GitHub Repository</a>
+        </div>
+-->
+
+<!-- Content appended here (in class franklin-content) -->
+<div class="franklin-content"><h1 id="franklin_demos"><a href="#franklin_demos" class="header-anchor">Franklin Demos</a></h1>
+<span style="text-align:center;width:100%;display:inline-block;font-variant-caps:small-caps"><a href="https://github.com/tlienart/Franklin.jl/tree/master/demos"><strong>Click here to see the source</strong></a></span>
+<p>This website is meant to be a quick way to show how to do stuff that people ask &#40;or that I thought would be a nice demo&#41;, it will complement the <a href="https://franklinjl.org/">official documentation</a>.</p>
+<p>It&#39;s not meant to be beautiful, rather just show how to get specific stuff done. If one block answers one of your question, make sure to check <a href="https://github.com/tlienart/Franklin.jl/tree/master/demos/index.md">the source</a> to see how it was done. The ordering is reverse chronological but just use the table of contents to guide you to whatever you might want to explore.</p>
+<p><strong>Note</strong>: an important philosophy here is that if you can write a Julia function that would produce the HTML you want, then write that function and let Franklin call it.</p>
+<p><strong>Note 2</strong>: the numbering in georgian script in the table of content is on purpose &#40;though for no particularly good reason other than that it looks nice... 🇬🇪&#41;</p>
+<div class="franklin-toc"><ol><li><a href="#013_inserting_markdown_in_markdown">&#40;013&#41; Inserting Markdown in Markdown</a></li><li><a href="#012_dates">&#40;012&#41; Dates</a></li><li><a href="#011_showing_type_information">&#40;011&#41; showing type information</a></li><li><a href="#010_clipboard_button_for_code_blocks">&#40;010&#41; clipboard button for code blocks</a></li></ol></div>
+<h2 id="013_inserting_markdown_in_markdown"><a href="#013_inserting_markdown_in_markdown" class="header-anchor">&#40;013&#41; Inserting Markdown in Markdown</a></h2>
+<p>Let&#39;s say you have a file <code>content.md</code> and you would like to include it in another page as if it had been written there in the first place. This is pretty easy to do. You could for instance use the following function:</p>
+<pre><code class="language-julia">function hfun_insertmd&#40;params&#41;
+  rpath &#61; params&#91;1&#93;
+  fullpath &#61; joinpath&#40;Franklin.path&#40;:folder&#41;, rpath&#41;
+  isfile&#40;fullpath&#41; || return &quot;&quot;
+  return read&#40;fullpath, String&#41;
+end</code></pre>
+<p>One thing to note is that all <code>.md</code> files in your folder will be considered as potential pages to turn into HTML, so if a <code>.md</code> file is meant to exclusively be used &quot;inserted&quot;, you should remove it from Franklin&#39;s reach by adding it to the <code>ignore</code> global variable putting something like this in your <code>config.md</code>:</p>
+<pre><code class="language-julia">@def ignore &#61; &#91;&quot;path/to/content.md&quot;&#93;</code></pre>
+<p>Here&#39;s an example with the insertion of the content of a file <code>foo/content.md</code>; the result of <code>&#123;&#123;insertmd foo/content.md&#125;&#125;</code> is:</p>
+
+<p>You can look at <a href="https://github.com/tlienart/Franklin.jl/blob/master/demos/utils.jl"><code>utils.jl</code></a> for the definition of the <code>hfun</code> &#40;same as above&#41;, at <a href="https://github.com/tlienart/Franklin.jl/blob/master/demos/index.md"><code>index.md</code></a> to see how it&#39;s called and at <a href="https://github.com/tlienart/Franklin.jl/blob/master/demos/foo/content.md"><code>foo/content.md</code></a> for the content file. Finally you can also check out the <a href="https://github.com/tlienart/Franklin.jl/blob/master/demos/config.md"><code>config.md</code></a> file to see how the content page is ignored.</p>
+<h2 id="012_dates"><a href="#012_dates" class="header-anchor">&#40;012&#41; Dates</a></h2>
+<p>The date of last modification on the page is kept in the <code>fd_mtime_raw</code> internal page variable, there is also a pre-formatted <code>fd_mtime</code>.</p>
+<p>Last modified: 2021-03-15 or March 15, 2021</p>
+<h2 id="011_showing_type_information"><a href="#011_showing_type_information" class="header-anchor">&#40;011&#41; showing type information</a></h2>
+<p>This is a short demo following a discussion on Slack, it shows three things:</p>
+<ul>
+<li><p>how to mark a block as &quot;<em>run here directly and show the output</em>&quot; without having to explicitly add a path and use a <code>\show</code></p>
+</li>
+<li><p>that types are now shown properly as they would be in the REPL.</p>
+</li>
+<li><p>that continuation works from cell to cell &#40;i.e. you can assume that a cell further below another cell has access to what was defined in the first&#41;</p>
+</li>
+</ul>
+<pre><code class="language-julia">s &#61; &quot;hello&quot;
+struct T; v::Int; end
+&#91;
+    Dict&#40;:a &#61;&gt; T&#40;1&#41;&#41;,
+    Dict&#40;:b &#61;&gt; T&#40;2&#41;&#41;,
+&#93;</code></pre><pre><code class="plaintext">2-element Array{Dict{Symbol,T},1}:
+ Dict(:a => T(1))
+ Dict(:b => T(2))</code></pre>
+<p>Here&#39;s another cell</p>
+<pre><code class="language-julia">T&#40;1&#41;
+print&#40;s&#41;</code></pre><pre><code class="plaintext">hello</code></pre>
+<p>Suppressed output:</p>
+<pre><code class="language-julia">X &#61; randn&#40;2, 3&#41;;</code></pre>
+<h2 id="010_clipboard_button_for_code_blocks"><a href="#010_clipboard_button_for_code_blocks" class="header-anchor">&#40;010&#41; clipboard button for code blocks</a></h2>
+<p>It&#39;s fairly easy to add a &quot;copy&quot; button to your code blocks using  a tool like <a href="https://clipboardjs.com"><code>clipboard.js</code></a>. In fact on this demo page, as you can see, there is a copy button on all code blocks. The steps to  reproduce  this are:</p>
+<ul>
+<li><p>copy the <a href="https://github.com/tlienart/Franklin.jl/blob/master/demos/_libs/clipboard.min.js"><code>clipboard.min.js</code></a> to <code>/libs/clipboard.min.js</code> &#40;<em>note that this is an old version of the library, <code>1.4</code> or something, if you take  the most recent version, you will have to adapt the script</em>&#41;</p>
+</li>
+<li><p>load that in <code>_layout/head.html</code> adding something like</p>
+</li>
+</ul>
+<pre><code class="language-html">&lt;script src&#61;&quot;/libs/clipboard.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+<ul>
+<li><p>add Javascript in the <code>_layout/foot.html</code>,  something <a href="https://github.com/tlienart/Franklin.jl/blob/master/demos/_layout/foot_clipboard.html">like this</a></p>
+</li>
+<li><p>adjust the CSS, for instance <a href="https://github.com/tlienart/Franklin.jl/blob/0276b1afb054017ff7e81bc7d083021a867a4b92/demos/_css/extras.css#L37-L61">something like this</a></p>
+</li>
+</ul>
+<p>and that&#39;s it 🏁.</p>
+
+<!-- For disqus -->
+
+
+  <div id="disqus_thread"></div>
+    <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://canyi-chen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+<div class="page-foot">
+  <div class="copyright">
+    &copy; Canyi Chen. Last modified: March 15, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>.
+  </div>
+</div>
+</div><!-- CONTENT ENDS HERE -->
+    </div> <!-- end of class main-content -->
+    </div> <!-- end of class main-content-wrap -->
+    </div> <!-- end of class page-wrap-->
+    
+    
+      <script src="/libs/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+
+    
+  </body>
+</html>

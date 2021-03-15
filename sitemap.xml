@@ -2,133 +2,139 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>syntax/utils/index.html</loc>
+    <loc>http://canyi-chen.github.io/syntax/utils/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>workflow/deploy/index.html</loc>
+    <loc>http://canyi-chen.github.io/workflow/deploy/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>research/publications_by_year/index.html</loc>
+    <loc>http://canyi-chen.github.io/research/publications_by_year/index.html</loc>
     <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>syntax/markdown/index.html</loc>
+    <loc>http://canyi-chen.github.io/demos/index.html</loc>
+    <lastmod>2021-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/syntax/markdown/index.html</loc>
     <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>workflow/sitemap-rss/index.html</loc>
+    <loc>http://canyi-chen.github.io/workflow/sitemap-rss/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>faq/technical/index.html</loc>
+    <loc>http://canyi-chen.github.io/faq/technical/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>index.html</loc>
+    <loc>http://canyi-chen.github.io/index.html</loc>
+    <lastmod>2021-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/syntax/divs-commands/index.html</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/search/index.html</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/syntax/page-variables/index.html</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/faq/troubleshooting/index.html</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/workflow/structure/index.html</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/code/index.html</loc>
     <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>syntax/divs-commands/index.html</loc>
-    <lastmod>2021-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>search/index.html</loc>
-    <lastmod>2021-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>syntax/page-variables/index.html</loc>
-    <lastmod>2021-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>faq/troubleshooting/index.html</loc>
-    <lastmod>2021-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>workflow/structure/index.html</loc>
-    <lastmod>2021-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>code/index.html</loc>
+    <loc>http://canyi-chen.github.io/research/publications_by_topic/index.html</loc>
     <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>research/publications_by_topic/index.html</loc>
+    <loc>http://canyi-chen.github.io/workflow/index.html</loc>
+    <lastmod>2021-03-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/julia/index.html</loc>
     <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>workflow/index.html</loc>
+    <loc>http://canyi-chen.github.io/styling/templates/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>julia/index.html</loc>
+    <loc>http://canyi-chen.github.io/cv/cv/index.html</loc>
     <lastmod>2021-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>styling/templates/index.html</loc>
+    <loc>http://canyi-chen.github.io/code/eval-tricks/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>cv/cv/index.html</loc>
-    <lastmod>2021-03-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>code/eval-tricks/index.html</loc>
+    <loc>http://canyi-chen.github.io/styling/classes/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>styling/classes/index.html</loc>
+    <loc>http://canyi-chen.github.io/faq/why-o-why/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>faq/why-o-why/index.html</loc>
-    <lastmod>2021-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>code/literate/index.html</loc>
+    <loc>http://canyi-chen.github.io/code/literate/index.html</loc>
     <lastmod>2021-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

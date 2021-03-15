@@ -1,4 +1,4 @@
-Sitemap: sitemap.xml
+Sitemap: http://canyi-chen.github.io/sitemap.xml
 
 User-agent: *
 Disallow:
