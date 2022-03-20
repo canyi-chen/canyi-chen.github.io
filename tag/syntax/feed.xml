@@ -33,7 +33,7 @@
   
   <content:encoded>
     <![CDATA[  
-<h2 id="curriculum_vitae">Curriculum vitae</h2>
+<h1 id="curriculum_vitae">Curriculum vitae</h1>
 <p>My resume can be found here in <a href="http://canyi-chen.github.io/static/CV/resume.pdf">EN</a> or <a href="http://canyi-chen.github.io/static/CV/resume_zh_CN.pdf">中文</a>.</p>
  ]]>
   </content:encoded>
