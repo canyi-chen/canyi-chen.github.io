@@ -27,3 +27,11 @@ For instance:
 \newcommand{\R}{\mathbb R}
 \newcommand{\scal}[1]{\langle #1 \rangle}
 
+<!--
+Configure
+-->
+@def  generate_rss = true
+@def  rss_website_title = "Canyi Chen"
+@def  rss_website_descr = "Canyi Chen's blog"
+@def  rss_website_url   = "http://canyi-chen.github.io"
+@def  rss_full_content = true
