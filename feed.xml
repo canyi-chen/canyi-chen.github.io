@@ -11,7 +11,7 @@
     <title>
       <![CDATA[  Canyi Chen  ]]>
     </title>
-    <link> http://canyi-chen.github.io/ </link>
+    <link> http://canyi-chen.github.io </link>
     <description>
       <![CDATA[  Canyi Chen&#39;s blog  ]]>
     </description>
@@ -30,6 +30,13 @@
   <description>
     <![CDATA[  Canyi Chen&#39;s CV  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h2 id="curriculum_vitae">Curriculum vitae</h2>
+<p>My resume can be found here in <a href="http://canyi-chen.github.io/static/CV/resume.pdf">EN</a> or <a href="http://canyi-chen.github.io/static/CV/resume_zh_CN.pdf">中文</a>.</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
   
@@ -49,6 +56,13 @@
   <description>
     <![CDATA[  Canyi Chen&#39;s Contact  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="contact">Contact</h1>
+<p>Email: chency1997 &#91;at&#93; ruc &#91;dot&#93; edu &#91;dot&#93; cn</p>
+ ]]>
+  </content:encoded>
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
   
@@ -68,6 +82,34 @@
   <description>
     <![CDATA[  Canyi Chen&#39;s Publications  ]]>
   </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="publications">Publications</h1>
+<ol>
+<li><p><strong>Chen, C.</strong>, <a href="http://stat.ruc.edu.cn/teacher_more.php?id&#61;61&amp;cid&#61;25">Xu, W.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Estimation in Heterogeneous Reduced Rank Regression: with Application to Order Determination in Sufficient Dimension Reduction. <em><a href="https://www.journals.elsevier.com/journal-of-multivariate-analysis">Journal of Multivariate Analysis</a></em>. Accepted. <a href="https://doi.org/10.1016/j.jmva.2022.104991">&#91;Link&#93;</a></p>
+</li>
+<li><p><strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Decoding from Heterogeneous 1-Bit Compressive Measurements. Major Revision at <em><a href="https://www.tandfonline.com/journals/ucgs20">Journal of Computational and Graphical Statistics</a></em>.</p>
+</li>
+<li><p>Zhang Y., <strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Sliced Independence Test. Major Revision at <em><a href="http://www3.stat.sinica.edu.tw/statistica/">Statistica Sinica</a></em>.</p>
+</li>
+<li><p><strong>Chen, C.</strong>, <a href="https://yuwen-gu.netlify.app/">Gu Y.</a>, <a href="http://users.stat.umn.edu/~zouxx019/">Zou H.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Sparse Composite Quantile Regression in Ultrahigh Dimensions. Submitted.</p>
+</li>
+<li><p><strong>Chen, C.</strong>, Chen B., <a href="https://faculty.bjtu.edu.cn/8316/">Kong L.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Robust Multi-task Learning in High Dimensions under Memory Constraint. Submitted.</p>
+</li>
+<li><p><strong>Chen, C.</strong> &#40;2022&#41;. Communication-Efficient Estimation for Distributed Canonical Correlation Analysis. Submitted.</p>
+</li>
+<li><p><strong>Chen, C.</strong> &#40;2022&#41;. Scalable and Globally Convergent Algorithm for Sufficient Dimension Reduction. Submitted.</p>
+</li>
+<li><p><strong>Chen, C.</strong> &#40;2022&#41;. Robust and Efficient Sparse Learning over Networks: A Decentralized Surrogate Composite Quantile Regression Approach. </p>
+</li>
+<li><p><strong>Chen, C.</strong>, &amp; Chen B. &#40;2022&#41;. Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Submitted.</p>
+</li>
+<li><p>He Y., <strong>Chen, C.</strong>, &amp; <a href="http://stat.ruc.edu.cn/teacher_more.php?id&#61;61&amp;cid&#61;25">Xu, W.</a> &#40;2022&#41;. Distributed Estimation of High-dimensional Linear Quantile Regression. Submitted.</p>
+</li>
+</ol>
+ ]]>
+  </content:encoded>
     
   <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
   
