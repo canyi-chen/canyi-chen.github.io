@@ -1,0 +1,38 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/basic.css"> <link rel=icon  href="/assets/favicon.png"> <title>阿里巴巴笔试记录（3月25日）</title> <header> <div class=blog-name ><a href="http://canyi-chen.github.io/">Canyi Chen</a></div> <nav> <ul> <li><a href="/">Home</a> <li><a href="/Publications/">Publications</a> <li><a href="/CV/">CV</a> <li><a href="/Contact/">Contact</a> </ul> <img src="/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content ><h1 id="阿里巴巴笔试记录3月25日"><a href="#阿里巴巴笔试记录3月25日" class=header-anchor >阿里巴巴笔试记录（3月25日）</a></h1> <h2 id="算法题"><a href="#算法题" class=header-anchor >算法题</a></h2> <ol> <li><p>验证账户是否错误</p> <li><p>第二题：牛牛学减法</p> </ol> <pre><code class="java hljs"><span class=hljs-keyword >import</span> java.util.*;
+<span class=hljs-keyword >public</span> <span class=hljs-keyword >class</span> <span class="hljs-title class_">Main</span>{
+    <span class=hljs-keyword >public</span> <span class=hljs-keyword >static</span> <span class=hljs-keyword >void</span> <span class="hljs-title function_">main</span><span class=hljs-params >(String args[])</span>{
+        <span class=hljs-type >Scanner</span> <span class=hljs-variable >in</span> <span class=hljs-operator >=</span> <span class=hljs-keyword >new</span> <span class="hljs-title class_">Scanner</span>(System.in);
+        <span class=hljs-type >int</span> <span class=hljs-variable >t</span> <span class=hljs-operator >=</span> in.nextInt();
+        <span class=hljs-keyword >for</span> (<span class=hljs-type >int</span> <span class=hljs-variable >i</span> <span class=hljs-operator >=</span> <span class=hljs-number >0</span>; i &lt; t; i++){
+            <span class=hljs-type >int</span>[] data = <span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[<span class=hljs-number >5</span>];
+            <span class=hljs-keyword >for</span> (<span class=hljs-type >int</span> <span class=hljs-variable >j</span> <span class=hljs-operator >=</span> <span class=hljs-number >0</span>; j &lt; <span class=hljs-number >5</span>; j++){
+                data[j] = in.nextInt();
+            }
+            System.out.println(maxTime(data));
+        }
+    }
+     
+    <span class=hljs-keyword >public</span> <span class=hljs-keyword >static</span> <span class=hljs-type >long</span> <span class="hljs-title function_">maxTime</span><span class=hljs-params >(<span class=hljs-type >int</span>[] data)</span> {
+        <span class=hljs-type >int</span> <span class=hljs-variable >n</span> <span class=hljs-operator >=</span> <span class=hljs-number >4</span>;
+        <span class=hljs-type >var</span> <span class=hljs-variable >tot</span> <span class=hljs-operator >=</span> <span class=hljs-number >0L</span>;
+        <span class=hljs-keyword >for</span> (<span class=hljs-keyword >var</span> b : data) {
+            tot += b;
+        }
+        <span class=hljs-type >var</span> <span class=hljs-variable >l</span> <span class=hljs-operator >=</span> <span class=hljs-number >0L</span>;
+        <span class=hljs-type >var</span> <span class=hljs-variable >r</span> <span class=hljs-operator >=</span> tot / n;
+        <span class=hljs-keyword >while</span> (l &lt; r) {
+            <span class=hljs-type >var</span> <span class=hljs-variable >x</span> <span class=hljs-operator >=</span> (l + r + <span class=hljs-number >1</span>) / <span class=hljs-number >2</span>;
+            <span class=hljs-type >var</span> <span class=hljs-variable >sum</span> <span class=hljs-operator >=</span> <span class=hljs-number >0L</span>;
+            <span class=hljs-keyword >for</span> (<span class=hljs-keyword >var</span> b : data) {
+                sum += Math.min(b, x);
+            }
+            <span class=hljs-keyword >if</span> (n * x &lt;= sum) {
+                l = x;
+            } <span class=hljs-keyword >else</span> {
+                r = x - <span class=hljs-number >1</span>;
+            }
+        }
+        <span class=hljs-keyword >return</span> l;
+    }
+ 
+}</code></pre> <ol start=3 > <li><p>计算N条直线所有可能的交点个数</p> </ol> <h2 id="单选"><a href="#单选" class=header-anchor >单选 </a></h2> <p>linux命令 SQL 排序算法 等等</p> <h2 id="多选"><a href="#多选" class=header-anchor >多选 </a></h2> <p>页面置换算法 银行家算法 HTTP 哈夫曼树 树 网络</p> <p>时间：9.-10.30 题型：5单选，5多选，3编程 单选多选：linux、mysql基础、数据结构 哈夫曼编码、排序算法、计算冲突域和广播域数目 编程： 第一道：判断字符串是否合法，有重复判断 第二道：5个正整数找4个大于0的数各减1，求可执行减法运算的最大次数 第三道：计算N条直线所有可能的交点个数</p> <div class=page-foot > <div class=copyright > &copy; Canyi Chen. Last modified: March 27, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. <a href="https://github.com/canyi-chen"><i class="fa-brands fa-github-square"></i> Github</a>. <a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden=true ></i> Feed</a>. <a href="https://canyi-chen.github.io/posts"><i class="fa-solid fa-blog"></i></i> Blog</a>. </div> </div> </div> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script> --> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>

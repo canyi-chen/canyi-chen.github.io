@@ -38,7 +38,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -64,7 +64,41 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Canyi Chen</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Blogs  ]]>
+  </title>
+  <link> http://canyi-chen.github.io/tag/index.html </link>
+  <guid> http://canyi-chen.github.io/tag/index.html </guid>
+  <description>
+    <![CDATA[  Canyi Chen&#39;s Blog  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h2 id="tags">Tags</h2>
+<ul>
+<li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;3&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;3&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;3&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;3&#41;</p>
+</li>
+</ul> ]]>
+  </content:encoded>
+    
+  <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -111,7 +145,47 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Fri, 22 Mar 2019 00:00:00 +0000</pubDate>  
+  <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Canyi Chen</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Blogs  ]]>
+  </title>
+  <link> http://canyi-chen.github.io/posts/index.html </link>
+  <guid> http://canyi-chen.github.io/posts/index.html </guid>
+  <description>
+    <![CDATA[  Canyi Chen&#39;s Blog  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h2 id="recent_posts">Recent posts</h2>
+<ul>
+<li><p><a href="../posts/meituan-0326">&#40;2022-03-26&#41; 美团笔试记录（3月26日）</a></p>
+</li>
+<li><p><a href="../posts/alibaba-0325">&#40;2022-03-25&#41; 阿里巴巴笔试记录（3月25日）</a></p>
+</li>
+<li><p><a href="../posts/recents-posts">&#40;2020-12-26&#41; Recent Posts List in Franklin.jl</a></p>
+</li>
+</ul><h2 id="posts">Posts</h2>
+<ul>
+<li><p><a href="../posts/meituan-0326">&#40;2022-03-26&#41; 美团笔试记录（3月26日）</a></p>
+</li>
+<li><p><a href="../posts/alibaba-0325">&#40;2022-03-25&#41; 阿里巴巴笔试记录（3月25日）</a></p>
+</li>
+<li><p><a href="../posts/recents-posts">&#40;2020-12-26&#41; Recent Posts List in Franklin.jl</a></p>
+</li>
+</ul><h2 id="tags">Tags</h2> ]]>
+  </content:encoded>
+    
+  <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
