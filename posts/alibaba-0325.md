@@ -7,10 +7,56 @@
 
 
 
-
 ## 算法题
-1. 验证账户是否错误
-2. 第二题：牛牛学减法
+
+### 第一题：验证账户是否错误
+
+### 第二题：牛牛学减法
+
+
+* 题目：牛牛今年上幼儿园了，老师叫他学习减法。老师给了他五个数字，他每次操作可以选择其中的四个数字减一，减一之后的数字不能小于零——因为幼儿园的牛牛还没有接触过负数。
+现在牛牛想知道，自己最多可以进行多少次这样的操作？
+* 输入:
+```
+2
+5 4 3 2 1
+1 1 1 10000 1
+```
+* 输出:
+```
+3
+1
+```
+* 代码
+* Python
+```python
+T = int(input())
+def check(nums, x):
+    s = 0
+    for i in range(5):
+        if nums[i] < x:
+            # at least x - nums[i] cannot be minus
+            s += x - nums[i]
+    if s > x:
+        return False
+    return True
+for _ in range(T):
+    nums = list(map(int, input().split()))
+    l, r = 0, int(1.3e9)
+
+    while l<r:
+        # binary search
+        mid = (l + r + 1) // 2
+        # print((l, mid, r))
+        if check(nums, mid):
+            l = mid
+        else:
+            r = mid - 1
+
+    print(l)
+```
+
+* Java
 ```java
 import java.util.*;
 public class Main{
@@ -52,7 +98,7 @@ public class Main{
 }
 ```
 
-3. 计算N条直线所有可能的交点个数
+### 计算N条直线所有可能的交点个数
 
 ## 单选 
 linux命令  SQL  排序算法 等等
@@ -63,7 +109,7 @@ linux命令  SQL  排序算法 等等
 
 
 
-
+```
 时间：9.-10.30
 题型：5单选，5多选，3编程
 单选多选：linux、mysql基础、数据结构
@@ -72,3 +118,4 @@ linux命令  SQL  排序算法 等等
 第一道：判断字符串是否合法，有重复判断
 第二道：5个正整数找4个大于0的数各减1，求可执行减法运算的最大次数
 第三道：计算N条直线所有可能的交点个数
+```
