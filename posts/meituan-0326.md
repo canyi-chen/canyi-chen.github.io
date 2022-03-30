@@ -42,7 +42,26 @@ print(int(2*r))
 ```
 
 3. 给出n个数，要求从中选任意个数，使得他们的和最大，且为7的倍数。
-   
+
+思路：dp[i][j], 记录前i个数的和对7取模为j的和的最大值即可。
+```python
+n = int(input())
+nums = list(map(int, input().split()))
+MAX = int(1e6+7)
+
+# create dp
+dp = [[-float("inf")]*7 for _ in range(MAX)]
+dp[0][0] = 0;
+for i in range(1, n + 1):
+    for j in range(7):
+        # dp[i][j] is at least as large as dp[i - 1][j], that is, we can simply ignore the last number 
+        dp[i][j] = max(dp[i][j], dp[i - 1][j])
+        dp[i][j] = max(dp[i][j], dp[i - 1][(j - nums[i - 1]) % 7] + nums[i - 1])
+        print((i,j,dp[i][j]))
+
+print(dp[n][0])
+```
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -71,6 +90,48 @@ int main(){
 ```
 
 4. 给出长度为n的数组，求所有长度为奇数的子段的中位数之和。
+
+思路：两个优先队列动态维护中位数 复杂度$O(n^2\log n)$
+```python
+from heapq import *
+
+class MedianFinder:
+
+    def __init__(self):
+        """
+        initialize your data structure here.
+        """
+        self.A = []  # 小顶堆，保留较大的一半
+        self.B = []  # 大顶堆，保留较小的一半
+
+    def addNum(self, num: int) -> None:
+        if len(self.A) != len(self.B):
+            heappush(self.A, num)
+            heappush(self.B, -heappop(self.A))
+        else:
+            heappush(self.B, -num)
+            heappush(self.A, -heappop(self.B))
+
+    def findMedian(self) -> float:
+        return self.A[0] if len(self.A) != len(self.B) else (self.A[0] - self.B[0]) / 2.0
+
+n = int(input())
+nums = list(map(int, input().split()))
+
+ans = 0
+
+for l in range(n):
+    m = MedianFinder()
+    m.addNum(nums[l])
+    ans += m.findMedian()
+    for r in range(l + 1, n):
+        m.addNum(nums[r])
+        if (r - l + 1)%2:
+            ans += m.findMedian()
+
+print(ans)
+```
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
