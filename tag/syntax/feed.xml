@@ -23,32 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  Curriculum vitae  ]]>
-  </title>
-  <link> http://canyi-chen.github.io/CV/index.html </link>
-  <guid> http://canyi-chen.github.io/CV/index.html </guid>
-  <description>
-    <![CDATA[  Canyi Chen&#39;s CV  ]]>
-  </description>  
-  
-  <content:encoded>
-    <![CDATA[  
-<h1 id="curriculum_vitae">Curriculum vitae</h1>
-<p>My resume can be found here in <a href="http://canyi-chen.github.io/static/CV/resume.pdf">pdf, EN</a> or <a href="http://canyi-chen.github.io/static/CV/resume_zh_CN.pdf">pdf, 中文</a>.</p>
- ]]>
-  </content:encoded>
-    
-  <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Canyi Chen</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Contact  ]]>
   </title>
   <link> http://canyi-chen.github.io/Contact/index.html </link>
@@ -64,41 +38,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Canyi Chen</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Blogs  ]]>
-  </title>
-  <link> http://canyi-chen.github.io/tag/index.html </link>
-  <guid> http://canyi-chen.github.io/tag/index.html </guid>
-  <description>
-    <![CDATA[  Canyi Chen&#39;s Blog  ]]>
-  </description>  
-  
-  <content:encoded>
-    <![CDATA[  
-<h2 id="tags">Tags</h2>
-<ul>
-<li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;3&#41;</p>
-</li>
-<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;3&#41;</p>
-</li>
-<li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;3&#41;</p>
-</li>
-<li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;3&#41;</p>
-</li>
-</ul> ]]>
-  </content:encoded>
-    
-  <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -125,7 +65,7 @@
 </li>
 <li><p><strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Decoding from Heterogeneous 1-Bit Compressive Measurements. Major Revision at <em><a href="https://www.tandfonline.com/journals/ucgs20">Journal of Computational and Graphical Statistics</a></em>.</p>
 </li>
-<li><p>Zhang Y., <strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Sliced Independence Test. Major Revision at <em><a href="http://www3.stat.sinica.edu.tw/statistica/">Statistica Sinica</a></em>.</p>
+<li><p>Zhang Y., <strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Sliced Independence Test. Minor Revision at <em><a href="http://www3.stat.sinica.edu.tw/statistica/">Statistica Sinica</a></em>.</p>
 </li>
 <li><p><strong>Chen, C.</strong>, <a href="https://yuwen-gu.netlify.app/">Gu Y.</a>, <a href="http://users.stat.umn.edu/~zouxx019/">Zou H.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Sparse Composite Quantile Regression in Ultrahigh Dimensions. Submitted.</p>
 </li>
@@ -145,7 +85,67 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Canyi Chen</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Curriculum vitae  ]]>
+  </title>
+  <link> http://canyi-chen.github.io/CV/index.html </link>
+  <guid> http://canyi-chen.github.io/CV/index.html </guid>
+  <description>
+    <![CDATA[  Canyi Chen&#39;s CV  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="curriculum_vitae">Curriculum vitae</h1>
+<p>My resume can be found here in <a href="http://canyi-chen.github.io/static/CV/resume.pdf">pdf, EN</a> or <a href="http://canyi-chen.github.io/static/CV/resume_zh_CN.pdf">pdf, 中文</a>.</p>
+ ]]>
+  </content:encoded>
+    
+  <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Canyi Chen</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Blogs  ]]>
+  </title>
+  <link> http://canyi-chen.github.io/tag/index.html </link>
+  <guid> http://canyi-chen.github.io/tag/index.html </guid>
+  <description>
+    <![CDATA[  Canyi Chen&#39;s Blog  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h2 id="tags">Tags</h2>
+<ul>
+<li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;4&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;4&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;4&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;4&#41;</p>
+</li>
+</ul> ]]>
+  </content:encoded>
+    
+  <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -172,6 +172,8 @@
 </li>
 <li><p><a href="../posts/alibaba-0325">&#40;2022-03-25&#41; 阿里巴巴笔试记录（3月25日）</a></p>
 </li>
+<li><p><a href="../posts/baidu_0329">&#40;2022-03-25&#41; 百度笔试记录（3月29日）</a></p>
+</li>
 <li><p><a href="../posts/recents-posts">&#40;2020-12-26&#41; Recent Posts List in Franklin.jl</a></p>
 </li>
 </ul><h2 id="posts">Posts</h2>
@@ -180,12 +182,14 @@
 </li>
 <li><p><a href="../posts/alibaba-0325">&#40;2022-03-25&#41; 阿里巴巴笔试记录（3月25日）</a></p>
 </li>
+<li><p><a href="../posts/baidu_0329">&#40;2022-03-25&#41; 百度笔试记录（3月29日）</a></p>
+</li>
 <li><p><a href="../posts/recents-posts">&#40;2020-12-26&#41; Recent Posts List in Franklin.jl</a></p>
 </li>
 </ul><h2 id="tags">Tags</h2> ]]>
   </content:encoded>
     
-  <pubDate>Mon, 28 Mar 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 30 Mar 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
