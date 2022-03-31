@@ -15,5 +15,5 @@ rss = "Canyi Chen's Publications"
 6. **Chen, C.** (2022). Communication-Efficient Estimation for Distributed Canonical Correlation Analysis. Submitted.
 7. **Chen, C.** (2022). Scalable and Globally Convergent Algorithm for Sufficient Dimension Reduction. Submitted.
 8. **Chen, C.** (2022). Robust and Efficient Sparse Learning over Networks: A Decentralized Surrogate Composite Quantile Regression Approach. 
-9. **Chen, C.**, & Chen B. (2022). Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Submitted.
+9. Chen B., & **Chen, C.** (2022). Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Submitted.
 10. He Y., **Chen, C.**, & [Xu, W.](http://stat.ruc.edu.cn/teacher_more.php?id=61&cid=25) (2022). Distributed Estimation of High-dimensional Linear Quantile Regression. Submitted.
