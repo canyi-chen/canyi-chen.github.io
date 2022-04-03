@@ -1,0 +1,118 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/basic.css"> <link rel=icon  href="/assets/favicon.png"> <title>京东笔试记录（4月3日）</title> <header> <div class=blog-name ><a href="http://canyi-chen.github.io/">Canyi Chen</a></div> <nav> <ul> <li><a href="/">Home</a> <li><a href="/Publications/">Publications</a> <li><a href="/CV/">CV</a> <li><a href="/Contact/">Contact</a> </ul> <img src="/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content ><h1 id="京东笔试记录4月3日"><a href="#京东笔试记录4月3日" class=header-anchor >京东笔试记录（4月3日）</a></h1> <h2 id="小明删数字"><a href="#小明删数字" class=header-anchor >小明删数字</a></h2> <pre><code class="julia hljs">时间限制： <span class=hljs-number >3000</span>MS
+
+内存限制： <span class=hljs-number >589824</span>KB
+
+题目描述：
+
+小明有一个长度为 n 的正整数序列，序列中每个数字都在范围 [<span class=hljs-number >1</span>, k] 内。小明现在想要删除这个序列中的若干数字，使得这个序列的最长上升子序列的长度严格小于 k。他现在想知道：最少需要删除多少个数字？
+
+上升序列是一个长度为 m 的序列 b，满足 b1 &lt; b2 &lt; ... &lt; bm−<span class=hljs-number >1</span> &lt; bm。子序列是指将原序列删除若干位置（或者不删）之后再从左到右拼接起来得到的一个序列。最长上升子序列是指原序列删除最少的位置之后形成的子序列是一个上升序列。例如， [<span class=hljs-number >1</span>, <span class=hljs-number >4</span>, <span class=hljs-number >5</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3</span>, <span class=hljs-number >2</span>, <span class=hljs-number >5</span>] 的一个最长上升子序列是 [<span class=hljs-number >1</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3</span>, <span class=hljs-number >5</span>]，长度为 <span class=hljs-number >4</span>；[<span class=hljs-number >1</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3</span>, <span class=hljs-number >4</span>, <span class=hljs-number >5</span>] 的最长上 升子序列就是其本身。
+
+
+
+输入描述
+
+第一行一个正整数 T ，表示有 T 组数据。
+
+对于每一组数据，第一行两个正整数 n, k；第二行 n 个正整数 a1, a2, ..., an，表示该序列。
+
+<span class=hljs-number >1</span> ≤ k ≤ n ≤ <span class=hljs-number >105</span>, <span class=hljs-number >1</span> ≤ T ≤ <span class=hljs-number >5</span>, <span class=hljs-number >1</span> ≤ ai ≤ k, Σ n ≤ <span class=hljs-number >2</span> × <span class=hljs-number >105</span>。
+
+输出描述
+对于每一组数据输出一行一个非负整数，表示最少需要删除的数字。
+
+
+样例输入
+
+<span class=hljs-number >4</span>
+<span class=hljs-number >5</span> <span class=hljs-number >3</span>
+<span class=hljs-number >1</span> <span class=hljs-number >2</span> <span class=hljs-number >3</span> <span class=hljs-number >1</span> <span class=hljs-number >2</span>
+<span class=hljs-number >5</span> <span class=hljs-number >1</span>
+<span class=hljs-number >1</span> <span class=hljs-number >1</span> <span class=hljs-number >1</span> <span class=hljs-number >1</span> <span class=hljs-number >1</span>
+<span class=hljs-number >10</span> <span class=hljs-number >4</span>
+<span class=hljs-number >1</span> <span class=hljs-number >2</span> <span class=hljs-number >1</span> <span class=hljs-number >2</span> <span class=hljs-number >3</span> <span class=hljs-number >4</span> <span class=hljs-number >3</span> <span class=hljs-number >3</span> <span class=hljs-number >4</span> <span class=hljs-number >4</span>
+<span class=hljs-number >9</span> <span class=hljs-number >3</span>
+<span class=hljs-number >1</span> <span class=hljs-number >2</span> <span class=hljs-number >2</span> <span class=hljs-number >1</span> <span class=hljs-number >1</span> <span class=hljs-number >3</span> <span class=hljs-number >2</span> <span class=hljs-number >3</span> <span class=hljs-number >3</span>
+
+样例输出
+
+<span class=hljs-number >1</span>
+<span class=hljs-number >5</span>
+<span class=hljs-number >2</span>
+<span class=hljs-number >2</span>
+
+
+提示
+
+删除的数字用下划线表明。方案可能不止一种。
+
+第一组样例，[<span class=hljs-number >1</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3</span>, <span class=hljs-number >1</span>, <span class=hljs-number >2</span>]；
+
+第二组样例，[<span class=hljs-number >1</span>, <span class=hljs-number >1</span>, <span class=hljs-number >1</span>, <span class=hljs-number >1</span>, <span class=hljs-number >1</span>]；
+
+第三组样例，[<span class=hljs-number >1</span>, <span class=hljs-number >2</span>, <span class=hljs-number >1</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3</span>, <span class=hljs-number >4</span>, <span class=hljs-number >3</span>, <span class=hljs-number >3</span>, <span class=hljs-number >4</span>, <span class=hljs-number >4</span>]；
+
+第四组样例，[<span class=hljs-number >1</span>, <span class=hljs-number >2</span>, <span class=hljs-number >2</span>, <span class=hljs-number >1</span>, <span class=hljs-number >1</span>, <span class=hljs-number >3</span>, <span class=hljs-number >2</span>, <span class=hljs-number >3</span>, <span class=hljs-number >3</span>]。</code></pre> <pre><code class="python hljs"><span class=hljs-keyword >from</span> sortedcontainers <span class=hljs-keyword >import</span> SortedDict
+
+
+<span class=hljs-keyword >def</span> <span class="hljs-title function_">get_ans</span>(<span class=hljs-params >a, b</span>):
+    count = <span class=hljs-number >0</span>
+    i, j = <span class=hljs-number >0</span>, <span class=hljs-built_in >len</span>(b) - <span class=hljs-number >1</span>
+    <span class=hljs-keyword >while</span> i &lt; <span class=hljs-built_in >len</span>(a) <span class=hljs-keyword >and</span> j &gt; -<span class=hljs-number >1</span>:
+        <span class=hljs-keyword >if</span> a[i] &gt; b[j]:
+            <span class=hljs-keyword >break</span>
+        <span class=hljs-keyword >else</span>:
+            count += <span class=hljs-number >1</span>
+            <span class=hljs-comment ># if i + 1 == len(a) - 1 or j - 1 == -1:</span>
+            <span class=hljs-keyword >if</span> i + <span class=hljs-number >1</span> == <span class=hljs-built_in >len</span>(a)  <span class=hljs-keyword >or</span> j - <span class=hljs-number >1</span> == -<span class=hljs-number >1</span>:
+                i += <span class=hljs-number >1</span>
+                j -= <span class=hljs-number >1</span>
+                <span class=hljs-keyword >continue</span>
+            <span class=hljs-keyword >if</span> a[i + <span class=hljs-number >1</span>] &gt; b[j]:
+                i += <span class=hljs-number >1</span>
+                <span class=hljs-keyword >continue</span>
+            <span class=hljs-keyword >if</span> a[i] &gt; b[j - <span class=hljs-number >1</span>]:
+                j -= <span class=hljs-number >1</span>
+                <span class=hljs-keyword >continue</span>
+            i += <span class=hljs-number >1</span>
+    <span class=hljs-keyword >return</span> count</code></pre> <h2 id="小红与粉刷匠"><a href="#小红与粉刷匠" class=header-anchor >小红与粉刷匠</a></h2> <pre><code class="julia hljs">时间限制： <span class=hljs-number >5000</span>MS
+内存限制： <span class=hljs-number >589824</span>KB
+题目描述：
+      小红遇到了一名粉刷匠。这名粉刷匠有三种颜料，分别是红、黄、蓝。为了方便， 这三种颜料分别命名为 A，B，C。
+
+      现在，粉刷匠正在粉刷一面长度为<span class=hljs-number >3</span>n 的墙壁。粉刷完之后，三种颜料的数目都相同。由于小红一不小心踢到了颜料桶，使得这面墙的每个地方都被染上了三种颜料中的其中一种，这很让粉刷匠头疼。
+
+       粉刷匠每次可以选择一段连续的墙壁进行粉刷，即全部粉刷上同一种颜色（A,B,C 三种中的其中一种）。粉刷匠想知道，他最少需要多少次粉刷才能使得三种颜料的数目都相同？
+
+
+
+输入描述
+第一行一个正整数 T ，表示有 T 组数据。
+
+对于每一组数据，第一行输入一个正整数 n，表示墙壁的长度为 <span class=hljs-number >3</span>n；第二行一个长度为 <span class=hljs-number >3</span>n 的字符串，仅包含 ABC 三种字母，表示该墙壁的初始颜色。
+
+<span class=hljs-number >1</span> ≤ n ≤ <span class=hljs-number >5</span> · <span class=hljs-number >104</span>, <span class=hljs-number >1</span> ≤ T ≤ <span class=hljs-number >5</span>。
+
+输出描述
+对于每一组数据，输出一个整数，表示答案。
+
+
+样例输入
+<span class=hljs-number >3</span>
+<span class=hljs-number >2</span>
+ABACBC
+<span class=hljs-number >3</span>
+AAABBBBAC
+<span class=hljs-number >3</span>
+CAACBCBCC
+样例输出
+<span class=hljs-number >0</span>
+<span class=hljs-number >1</span>
+<span class=hljs-number >2</span>
+
+提示
+对于第一组样例，A,B,C 的数目都是 <span class=hljs-number >2</span>，故无需进行粉刷；
+
+对于第二组样例，选择区间 [<span class=hljs-number >7</span>, <span class=hljs-number >9</span>]  全部粉刷为 C，之后形成的墙壁为 AAABBBCCC；
+
+对于第三组样例，先选择区间 [<span class=hljs-number >4</span>, <span class=hljs-number >4</span>] 粉刷为 B 之后形成的墙壁为 CAABBCBCC， 再选择区间 [<span class=hljs-number >9</span>, <span class=hljs-number >9</span>] 全部粉刷为 A 之后形成的墙壁为 CAABBCBCA。此时每种颜色都有 <span class=hljs-number >3</span> 个。</code></pre> <div class=page-foot > <div class=copyright > &copy; Canyi Chen. Last modified: April 03, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. Icons by <a href="https://fontawesome.com/">Font Awesome</a>. <a href="https://github.com/canyi-chen"><i class="fa-brands fa-github-square"></i> Github</a>. <a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden=true ></i> Feed</a>. <a href="https://canyi-chen.github.io/posts"><i class="fa-solid fa-blog"></i> Blog</a>. </div> </div> </div> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script> --> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
