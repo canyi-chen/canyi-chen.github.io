@@ -38,7 +38,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -85,7 +85,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -111,7 +111,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -136,16 +136,16 @@
 <ul>
 <li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;4&#41;</p>
 </li>
-<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;5&#41;</p>
+<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;8&#41;</p>
 </li>
-<li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;5&#41;</p>
+<li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;8&#41;</p>
 </li>
 <li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;4&#41;</p>
 </li>
 </ul> ]]>
   </content:encoded>
     
-  <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -168,6 +168,12 @@
     <![CDATA[  
 <h2 id="recent_posts">Recent posts</h2>
 <ul>
+<li><p><a href="../posts/markov_chain">&#40;2022-04-12&#41; Selected Exercises for Markov Chain</a></p>
+</li>
+<li><p><a href="../posts/tailai">&#40;2022-04-12&#41; Interviews for Tailai</a></p>
+</li>
+<li><p><a href="../posts/pdd-0410">&#40;2022-04-10&#41; 拼多多</a></p>
+</li>
 <li><p><a href="../posts/meituan-0326">&#40;2022-03-26&#41; 美团笔试记录（3月26日）</a></p>
 </li>
 <li><p><a href="../posts/alibaba-0325">&#40;2022-03-25&#41; 阿里巴巴笔试记录（3月25日）</a></p>
@@ -180,6 +186,12 @@
 </li>
 </ul><h2 id="posts">Posts</h2>
 <ul>
+<li><p><a href="../posts/markov_chain">&#40;2022-04-12&#41; Selected Exercises for Markov Chain</a></p>
+</li>
+<li><p><a href="../posts/tailai">&#40;2022-04-12&#41; Interviews for Tailai</a></p>
+</li>
+<li><p><a href="../posts/pdd-0410">&#40;2022-04-10&#41; 拼多多</a></p>
+</li>
 <li><p><a href="../posts/meituan-0326">&#40;2022-03-26&#41; 美团笔试记录（3月26日）</a></p>
 </li>
 <li><p><a href="../posts/alibaba-0325">&#40;2022-03-25&#41; 阿里巴巴笔试记录（3月25日）</a></p>
@@ -193,7 +205,7 @@
 </ul><h2 id="tags">Tags</h2> ]]>
   </content:encoded>
     
-  <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>

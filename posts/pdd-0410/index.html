@@ -1,0 +1,144 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/libs/highlight/github.min.css"> <link rel=stylesheet  href="/css/franklin.css"> <link rel=stylesheet  href="/css/basic.css"> <link rel=icon  href="/assets/favicon.png"> <title>拼多多</title> <header> <div class=blog-name ><a href="http://canyi-chen.github.io/">Canyi Chen</a></div> <nav> <ul> <li><a href="/">Home</a> <li><a href="/Publications/">Publications</a> <li><a href="/CV/">CV</a> <li><a href="/Contact/">Contact</a> </ul> <img src="/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content ><pre><code class="java hljs"><span class=hljs-type >boolean</span>[] visited = <span class=hljs-keyword >new</span> <span class="hljs-title class_">boolean</span>[N][M]
+<span class=hljs-type >int</span> <span class=hljs-variable >step</span> <span class=hljs-operator >=</span> <span class=hljs-number >0</span>;
+<span class=hljs-type >int</span> <span class=hljs-variable >ans</span> <span class=hljs-operator >=</span> -<span class=hljs-number >1</span>;
+Queue&lt;<span class=hljs-type >int</span>[]&gt; queue = <span class=hljs-keyword >new</span> <span class="hljs-title class_">LinkedList</span>&lt;&gt;();
+<span class=hljs-comment >// queue先放入K的横纵坐标</span>
+<span class=hljs-keyword >while</span>(!queue.isEmpty()){
+ <span class=hljs-type >int</span> <span class=hljs-variable >sz</span> <span class=hljs-operator >=</span> queue.size();
+ <span class=hljs-keyword >while</span>(sz-- &gt; <span class=hljs-number >0</span>){
+  <span class=hljs-type >boolean</span> <span class=hljs-variable >flag</span> <span class=hljs-operator >=</span> <span class=hljs-literal >false</span>;
+  <span class=hljs-type >int</span>[] cur = queue.poll();
+  <span class=hljs-type >int</span> <span class=hljs-variable >i</span> <span class=hljs-operator >=</span> cur[<span class=hljs-number >0</span>], j = cur[<span class=hljs-number >1</span>];
+  <span class=hljs-keyword >if</span>(i &lt; <span class=hljs-number >0</span> || i &gt;= N || j &lt; <span class=hljs-number >0</span> || j &gt;=M) <span class=hljs-keyword >continue</span>;
+  visited[i][j] = <span class=hljs-literal >true</span>;
+  <span class=hljs-keyword >if</span>(grid[i][j] == <span class=hljs-string >&#x27;0&#x27;</span>) <span class=hljs-keyword >continue</span>;
+  <span class=hljs-keyword >if</span>(grid[i][j] == <span class=hljs-string >&#x27;T&#x27;</span>){
+   ans = step;
+   flag = <span class=hljs-literal >true</span>;
+   <span class=hljs-keyword >break</span>;
+  }
+  <span class=hljs-keyword >if</span>(j + <span class=hljs-number >1</span> &lt; M &amp;&amp; grid[i][j + <span class=hljs-number >1</span>] != <span class=hljs-string >&#x27;0&#x27;</span>){
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i - <span class=hljs-number >1</span>, j + <span class=hljs-number >2</span>});
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i + <span class=hljs-number >1</span>, j + <span class=hljs-number >2</span>});
+  }
+  <span class=hljs-keyword >if</span>(j - <span class=hljs-number >1</span> &gt;= <span class=hljs-number >0</span> &amp;&amp; grid[i][j - <span class=hljs-number >1</span>] != <span class=hljs-string >&#x27;0&#x27;</span>){
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i - <span class=hljs-number >1</span>, j - <span class=hljs-number >2</span>});
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i + <span class=hljs-number >1</span>, j - <span class=hljs-number >2</span>});
+  }
+  <span class=hljs-keyword >if</span>(i + <span class=hljs-number >1</span> &lt; N &amp;&amp; grid[i + <span class=hljs-number >1</span>][j] != <span class=hljs-string >&#x27;0&#x27;</span>){
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i + <span class=hljs-number >2</span>, j + <span class=hljs-number >1</span>});
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i + <span class=hljs-number >2</span>, j - <span class=hljs-number >1</span>});
+  }
+  <span class=hljs-keyword >if</span>(i - <span class=hljs-number >1</span> &gt;= <span class=hljs-number >0</span> &amp;&amp; grid[i - <span class=hljs-number >1</span>][j] != <span class=hljs-string >&#x27;0&#x27;</span>){
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i - <span class=hljs-number >2</span>, j - <span class=hljs-number >1</span>});
+    queue.offer(<span class=hljs-keyword >new</span> <span class="hljs-title class_">int</span>[]{i - <span class=hljs-number >2</span>, j + <span class=hljs-number >1</span>});
+  }
+ }
+ <span class=hljs-keyword >if</span>(flag) <span class=hljs-keyword >break</span>;
+ step++;
+}
+System.out.println(ans);</code></pre> <pre><code class="cpp hljs"><span class=hljs-keyword >constexpr</span> <span class=hljs-type >static</span> <span class=hljs-type >int</span> direction[<span class=hljs-number >8</span>][<span class=hljs-number >2</span>] = { <span class=hljs-comment >//可达位置</span>
+    {<span class=hljs-number >-2</span>,<span class=hljs-number >-1</span>},
+    {<span class=hljs-number >-1</span>,<span class=hljs-number >-2</span>},
+    {<span class=hljs-number >-2</span>,<span class=hljs-number >1</span>},
+    {<span class=hljs-number >-1</span>,<span class=hljs-number >2</span>},
+    {<span class=hljs-number >1</span>,<span class=hljs-number >-2</span>},
+    {<span class=hljs-number >1</span>,<span class=hljs-number >2</span>},
+    {<span class=hljs-number >2</span>,<span class=hljs-number >-1</span>},
+    {<span class=hljs-number >2</span>,<span class=hljs-number >1</span>},
+};
+
+<span class=hljs-keyword >constexpr</span> <span class=hljs-type >static</span> <span class=hljs-type >int</span> directionK[<span class=hljs-number >4</span>][<span class=hljs-number >2</span>] = { <span class=hljs-comment >//别脚石可处位置</span>
+    {<span class=hljs-number >-1</span>,<span class=hljs-number >0</span>},
+    {<span class=hljs-number >1</span>,<span class=hljs-number >0</span>},
+    {<span class=hljs-number >0</span>,<span class=hljs-number >-1</span>},
+    {<span class=hljs-number >0</span>,<span class=hljs-number >1</span>},
+};
+
+<span class=hljs-function ><span class=hljs-type >void</span> <span class=hljs-title >handler</span><span class=hljs-params >()</span> </span>{
+    <span class=hljs-type >int</span> t;
+    cin &gt;&gt; t;
+    <span class=hljs-keyword >for</span> (<span class=hljs-type >int</span> index = <span class=hljs-number >0</span>; index &lt; t; ++index) {
+        <span class=hljs-type >int</span> n, m;
+        cin &gt;&gt; n &gt;&gt; m;
+        vector&lt;vector&lt;<span class=hljs-type >char</span>&gt;&gt; <span class=hljs-built_in >grid</span>(n, <span class=hljs-built_in >vector</span>&lt;<span class=hljs-type >char</span>&gt;(m, <span class=hljs-number >1</span>)); <span class=hljs-comment >//棋盘</span>
+        vector&lt;vector&lt;<span class=hljs-type >int</span>&gt;&gt; <span class=hljs-built_in >visited</span>(n, <span class=hljs-built_in >vector</span>&lt;<span class=hljs-type >int</span>&gt;(m, <span class=hljs-number >0</span>)); <span class=hljs-comment >//访问标记</span>
+        <span class=hljs-type >int</span> countG = <span class=hljs-number >0</span>; <span class=hljs-comment >//草地格子数量</span>
+        queue&lt;pair&lt;<span class=hljs-type >int</span>, <span class=hljs-type >int</span>&gt;&gt; q; <span class=hljs-comment >//BFS辅助队列</span>
+        <span class=hljs-keyword >for</span> (<span class=hljs-type >int</span> i = <span class=hljs-number >0</span>; i &lt; n; ++i) { <span class=hljs-comment >//输入</span>
+            <span class=hljs-keyword >for</span> (<span class=hljs-type >int</span> j = <span class=hljs-number >0</span>; j &lt; m; ++j) {
+                cin &gt;&gt; grid[i][j];
+                <span class=hljs-keyword >if</span> (grid[i][j] == <span class=hljs-string >&#x27;K&#x27;</span> || grid[i][j] == <span class=hljs-string >&#x27;T&#x27;</span> || grid[i][j] == <span class=hljs-string >&#x27;1&#x27;</span>) {
+                    ++countG;
+                }
+                <span class=hljs-keyword >if</span> (grid[i][j] == <span class=hljs-string >&#x27;K&#x27;</span>) {
+                    q.<span class=hljs-built_in >emplace</span>(<span class=hljs-built_in >make_pair</span>(i, j));
+                    ++visited[i][j];
+                }
+            }
+        }
+        <span class=hljs-keyword >if</span> (countG &lt;= <span class=hljs-number >2</span>) { <span class=hljs-comment >//草地数量不足则返回负一</span>
+            cout &lt;&lt; <span class=hljs-number >-1</span> &lt;&lt; endl;
+            <span class=hljs-keyword >continue</span>;
+        }
+        <span class=hljs-type >int</span> ans = <span class=hljs-number >0</span>, size = <span class=hljs-number >1</span>, count = <span class=hljs-number >0</span>;
+        <span class=hljs-type >bool</span> canFind = <span class=hljs-literal >false</span>; <span class=hljs-comment >//标记是否可达目的地</span>
+        <span class=hljs-keyword >while</span> (!q.<span class=hljs-built_in >empty</span>()) {
+            <span class=hljs-keyword >auto</span>&amp; [i, j] = q.<span class=hljs-built_in >front</span>();
+            set&lt;pair&lt;<span class=hljs-type >int</span>, <span class=hljs-type >int</span>&gt;&gt; untouchble; <span class=hljs-comment >//记录因别脚石影响不可达的位置</span>
+            <span class=hljs-keyword >for</span> (<span class=hljs-type >const</span> <span class=hljs-keyword >auto</span>&amp; [iOfs, jOfs] : directionK) {
+                <span class=hljs-type >int</span> x = i + iOfs, y = j + jOfs;
+                <span class=hljs-keyword >if</span> (x &gt;= <span class=hljs-number >0</span> &amp;&amp; x &lt; n &amp;&amp; y &gt;= <span class=hljs-number >0</span> &amp;&amp; y &lt; m &amp;&amp; grid[x][y] == <span class=hljs-string >&#x27;0&#x27;</span>) {
+                    <span class=hljs-keyword >if</span> (iOfs == <span class=hljs-number >-1</span> &amp;&amp; jOfs == <span class=hljs-number >0</span>) {
+                        untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i - <span class=hljs-number >2</span>, j - <span class=hljs-number >1</span>));
+                        untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i - <span class=hljs-number >2</span>, j + <span class=hljs-number >1</span>));
+                    }
+                    <span class=hljs-keyword >else</span> {
+                        <span class=hljs-keyword >if</span> (iOfs == <span class=hljs-number >1</span> &amp;&amp; jOfs == <span class=hljs-number >0</span>) {
+                            untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i + <span class=hljs-number >2</span>, j - <span class=hljs-number >1</span>));
+                            untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i + <span class=hljs-number >2</span>, j + <span class=hljs-number >1</span>));
+                        }
+                        <span class=hljs-keyword >else</span> {
+                            <span class=hljs-keyword >if</span> (iOfs == <span class=hljs-number >0</span> &amp;&amp; jOfs == <span class=hljs-number >-1</span>) {
+                                untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i - <span class=hljs-number >1</span>, j - <span class=hljs-number >2</span>));
+                                untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i + <span class=hljs-number >1</span>, j - <span class=hljs-number >2</span>));
+                            }
+                            <span class=hljs-keyword >else</span> {
+                                untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i - <span class=hljs-number >1</span>, j + <span class=hljs-number >2</span>));
+                                untouchble.<span class=hljs-built_in >insert</span>(<span class=hljs-built_in >make_pair</span>(i + <span class=hljs-number >1</span>, j + <span class=hljs-number >2</span>));
+                            }
+                        }
+                    }
+                }
+            }
+            <span class=hljs-keyword >for</span> (<span class=hljs-type >const</span> <span class=hljs-keyword >auto</span>&amp; [iOfs, jOfs] : direction) {
+                <span class=hljs-type >int</span> x = i + iOfs, y = j + jOfs;
+                <span class=hljs-keyword >if</span> (x &gt;= <span class=hljs-number >0</span> &amp;&amp; x &lt; m &amp;&amp; y &gt;= <span class=hljs-number >0</span> &amp;&amp; y &lt; n &amp;&amp; <span class=hljs-comment >//在表格范围内 </span>
+                    visited[x][y] != <span class=hljs-number >1</span> &amp;&amp; <span class=hljs-comment >//未访问过</span>
+                    grid[x][y] != <span class=hljs-string >&#x27;0&#x27;</span> &amp;&amp; <span class=hljs-comment >//不是石头</span>
+                    !untouchble.<span class=hljs-built_in >count</span>(<span class=hljs-built_in >make_pair</span>(x, y))) { <span class=hljs-comment >//没被别马脚</span>
+                    ++visited[x][y];
+                    <span class=hljs-keyword >if</span> (grid[x][y] == <span class=hljs-string >&#x27;T&#x27;</span>) {
+                        canFind = <span class=hljs-literal >true</span>;
+                        <span class=hljs-keyword >goto</span> L;
+                    }
+                    q.<span class=hljs-built_in >emplace</span>(<span class=hljs-built_in >make_pair</span>(x, y));
+                }
+            }
+            q.<span class=hljs-built_in >pop</span>();
+            ++count;
+            <span class=hljs-keyword >if</span> (count == size) {
+                size = q.<span class=hljs-built_in >size</span>();
+                count = <span class=hljs-number >0</span>;
+                ++ans;
+            }
+        }
+    L:
+        <span class=hljs-keyword >if</span> (canFind) {
+            cout &lt;&lt; ++ans &lt;&lt; endl;
+        }
+        <span class=hljs-keyword >else</span> {
+            cout &lt;&lt; <span class=hljs-number >-1</span> &lt;&lt; endl;
+        }
+    }
+}</code></pre> <div class=page-foot > <div class=copyright > &copy; Canyi Chen. Last modified: April 12, 2022. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. Icons by <a href="https://fontawesome.com/">Font Awesome</a>. <a href="https://github.com/canyi-chen"><i class="fa-brands fa-github-square"></i> Github</a>. <a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden=true ></i> Feed</a>. <a href="/posts"><i class="fa-solid fa-blog"></i> Blog</a>. </div> </div> </div> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script> --> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
