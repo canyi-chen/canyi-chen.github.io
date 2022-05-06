@@ -69,6 +69,11 @@
 ## 面试问题
 
 1. 掷骰子掷到连续两个6的平均步数。
-2. 某连续分布$X_i\sim f$, stop if $X_i < X_{i + 1}$ and continue if $X_i\geq X_{i + 1}$. 问平均步数。
+   * Markov chain
+2. 某连续分布$X_i\sim f$, stop if $X_i \leq  X_{i + 1}$ and continue if $X_i > X_{i + 1}$. 问平均步数。
+   
+   * $\exp(1) - 1$
+   * https://stats.stackexchange.com/questions/350923/brain-teaser-what-is-the-expected-length-of-an-iid-sequence-that-is-monotonical
 3. 认识关系。n个人至少需要几个认识关系使得任意两个人有同一个人同时认识他们。
 4. 52扑克牌，有放回抽取，问抽取到所有花色的A的平均步数。
+   * 拓展：无放回， https://math.stackexchange.com/questions/268432/expected-number-of-card-draws-to-get-all-4-suits
