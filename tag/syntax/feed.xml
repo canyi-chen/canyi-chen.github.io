@@ -38,7 +38,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -60,6 +60,7 @@
   <content:encoded>
     <![CDATA[  
 <h1 id="publications">Publications</h1>
+<h2 id="publications__2">Publications</h2>
 <ol>
 <li><p><strong>Chen, C.</strong>, <a href="http://stat.ruc.edu.cn/teacher_more.php?id&#61;61&amp;cid&#61;25">Xu, W.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Estimation in Heterogeneous Reduced Rank Regression: with Application to Order Determination in Sufficient Dimension Reduction. <em><a href="https://www.journals.elsevier.com/journal-of-multivariate-analysis">Journal of Multivariate Analysis</a></em>, <em><a href="https://www.sciencedirect.com/journal/journal-of-multivariate-analysis/vol/190/suppl/C">190</a></em>, 104991.  <a href="https://doi.org/10.1016/j.jmva.2022.104991">&#91;Link&#93;</a>, <a href="http://canyi-chen.github.io/static/Publications/Chen2022Distributed&#37;20estimation&#37;20in&#37;20heterogeneous&#37;20reduced&#37;20rank&#37;20regression.pdf">&#91;PDF&#93;</a>.</p>
 </li>
@@ -67,25 +68,31 @@
 </li>
 <li><p><strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Decoding from Heterogeneous 1-Bit Compressive Measurements. <em><a href="https://www.tandfonline.com/journals/ucgs20">Journal of Computational and Graphical Statistics</a></em>. Accepted.  </p>
 </li>
-<li><p><strong>Chen, C.</strong> &#40;2022&#41;. Scalable and Globally Convergent Algorithm for Sufficient Dimension Reduction. Major Revision at <em><a href="https://www.springer.com/journal/180/?gclid&#61;EAIaIQobChMI4s_biIGT-AIVxO5RCh0RfAwcEAAYASAAEgLxzvD_BwE">Computational Statistics</a></em>.</p>
+</ol>
+<h2 id="submitted_papers">Submitted papers</h2>
+<ol>
+<li><p><strong>Chen, C.</strong> &#40;2022&#43;&#41;. Scalable and Globally Convergent Algorithm for Sufficient Dimension Reduction. Major Revision at <em><a href="https://www.springer.com/journal/180/?gclid&#61;EAIaIQobChMI4s_biIGT-AIVxO5RCh0RfAwcEAAYASAAEgLxzvD_BwE">Computational Statistics</a></em>.</p>
 </li>
-<li><p><strong>Chen, C.</strong>, <a href="https://yuwen-gu.netlify.app/">Gu Y.</a>, <a href="http://users.stat.umn.edu/~zouxx019/">Zou H.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Distributed Sparse Composite Quantile Regression in Ultrahigh Dimensions.  Major Revision at <em><a href="http://www3.stat.sinica.edu.tw/statistica/">Statistica Sinica</a></em>.</p>
+<li><p><strong>Chen, C.</strong>, <a href="https://yuwen-gu.netlify.app/">Gu Y.</a>, <a href="http://users.stat.umn.edu/~zouxx019/">Zou H.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#43;&#41;. Distributed Sparse Composite Quantile Regression in Ultrahigh Dimensions.  Major Revision at <em><a href="http://www3.stat.sinica.edu.tw/statistica/">Statistica Sinica</a></em>.</p>
 </li>
-<li><p><strong>Chen, C.</strong>, Chen B., <a href="https://faculty.bjtu.edu.cn/8316/">Kong L.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Robust Multi-task Learning in High Dimensions under Memory Constraint. Submitted.</p>
+<li><p><strong>Chen, C.</strong>, Chen B., <a href="https://faculty.bjtu.edu.cn/8316/">Kong L.</a>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#43;&#41;. Robust Multi-task Learning in High Dimensions under Memory Constraint. Submitted.</p>
 </li>
-<li><p><strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#41;. Communication-Efficient Estimation for Distributed Canonical Correlation Analysis. </p>
+<li><p>Chen B., &amp; <strong>Chen, C.</strong> &#40;2022&#43;&#41;. Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Submitted.</p>
 </li>
-<li><p><strong>Chen, C.</strong> &#40;2022&#41;. Robust and Efficient Sparse Learning over Networks: A Decentralized Surrogate Composite Quantile Regression Approach. </p>
+<li><p>He Y., <strong>Chen, C.</strong>, &amp; <a href="http://stat.ruc.edu.cn/teacher_more.php?id&#61;61&amp;cid&#61;25">Xu, W.</a> &#40;2022&#43;&#41;. Distributed Estimation of High-dimensional Linear Quantile Regression. Submitted.</p>
 </li>
-<li><p>Chen B., &amp; <strong>Chen, C.</strong> &#40;2022&#41;. Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Submitted.</p>
+</ol>
+<h2 id="working_papers">Working papers</h2>
+<ol>
+<li><p><strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#43;&#41;. Communication-Efficient Estimation for Distributed Canonical Correlation Analysis. </p>
 </li>
-<li><p>He Y., <strong>Chen, C.</strong>, &amp; <a href="http://stat.ruc.edu.cn/teacher_more.php?id&#61;61&amp;cid&#61;25">Xu, W.</a> &#40;2022&#41;. Distributed Estimation of High-dimensional Linear Quantile Regression. Submitted.</p>
+<li><p><strong>Chen, C.</strong>, &amp; <a href="http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm">Zhu L.</a> &#40;2022&#43;&#41;. Robust and Efficient Sparse Learning over Networks: A Decentralized Surrogate Composite Quantile Regression Approach. </p>
 </li>
 </ol>
  ]]>
   </content:encoded>
     
-  <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -111,7 +118,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -145,7 +152,7 @@
 </ul> ]]>
   </content:encoded>
     
-  <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -209,7 +216,7 @@
 </ul><h2 id="tags">Tags</h2> ]]>
   </content:encoded>
     
-  <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>  
+  <pubDate>Wed, 06 Jul 2022 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
