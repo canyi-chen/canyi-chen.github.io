@@ -20,7 +20,7 @@ rss = "Canyi Chen's Publications"
 
 6. **Chen, C.**, Chen B., [Kong L.](https://faculty.bjtu.edu.cn/8316/), & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Robust Multi-task Learning in High Dimensions under Memory Constraint. Submitted.
 
-7.  Chen B., & **Chen, C.** (2022+). Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Submitted.
+7.  Chen B., & **Chen, C.** (2022+). Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Major Revision at *[Journal of Statistical Computation and Simulation](https://www.tandfonline.com/toc/gscs20/current)*.
 8.   He Y., **Chen, C.**, & [Xu, W.](http://stat.ruc.edu.cn/teacher_more.php?id=61&cid=25) (2022+). Distributed Estimation of High-dimensional Linear Quantile Regression. Minor revision at *[Statistics and Its Interface](https://www.intlpress.com/site/pub/pages/journals/items/sii/_home/_main/index.php)*.
 
 
