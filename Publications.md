@@ -13,7 +13,8 @@ rss = "Canyi Chen's Publications"
 2. Zhang Y., **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022). Sliced Independence Test. *[Statistica Sinica](http://www3.stat.sinica.edu.tw/statistica/)*. Accepted. [[Link]](https://doi.org/10.5705/ss.202021.0203), [[PDF]](/static/Publications/Zhang2022Sliced%20Independence%20Test.pdf). 
 3. **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022). Distributed Decoding from Heterogeneous 1-Bit Compressive Measurements. *[Journal of Computational and Graphical Statistics](https://www.tandfonline.com/journals/ucgs20)*. Accepted.  [[Link]](https://doi.org/10.1080/10618600.2022.2118751). 
 4. He Y., **Chen, C.**, & [Xu, W.](http://stat.ruc.edu.cn/teacher_more.php?id=61&cid=25) (2022+). Debiased Distributed Quantile Regression in High Dimensions. *[Statistics and Its Interface](https://www.intlpress.com/site/pub/pages/journals/items/sii/_home/_main/index.php)*. Accepted. 
-5. **Chen, C.**, [Gu Y.](https://yuwen-gu.netlify.app/), [Zou H.](http://users.stat.umn.edu/~zouxx019/), & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Distributed Sparse Composite Quantile Regression in Ultrahigh Dimensions. *[Statistica Sinica](http://www3.stat.sinica.edu.tw/statistica/)*. Accepted. 
+5. **Chen, C.**, [Gu Y.](https://yuwen-gu.netlify.app/), [Zou H.](http://users.stat.umn.edu/~zouxx019/), & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Distributed Sparse Composite Quantile Regression in Ultrahigh Dimensions. *[Statistica Sinica](http://www3.stat.sinica.edu.tw/statistica/)*. Accepted. [[Link]](https://doi.org/10.5705/ss.202022.0095). 
+   
 ## Submitted papers
 
 1. **Chen, C.** (2022+). Scalable and Globally Convergent Algorithm for Sufficient Dimension Reduction. Major Revision at *[Computational Statistics](https://www.springer.com/journal/180/?gclid=EAIaIQobChMI4s_biIGT-AIVxO5RCh0RfAwcEAAYASAAEgLxzvD_BwE)*.
@@ -27,3 +28,4 @@ rss = "Canyi Chen's Publications"
 1.  **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Communication-Efficient Estimation for Distributed Canonical Correlation Analysis. 
 2. **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Robust and Efficient Sparse Learning over Networks: A Decentralized Surrogate Composite Quantile Regression Approach. 
 3. **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Robust and Efficient Matrix Completion for Massive Data. 
+
