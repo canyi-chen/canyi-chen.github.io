@@ -18,9 +18,11 @@ I am currently a Ph.D. Candidate from [Institute of Statistics and Big Data](htt
 
 ## Honors and Awards
 
-- University Graduate First Class Scholarship. Renmin University of China. 2019 - 2021
+- National Scholarship. Renmin University of China. 2022
+- University Graduate First Class Scholarship. Renmin University of China. 2019 - 2022
 - [National Second Prize in National Undergraduate Mathematical Modeling Contest](http://www.mcm.edu.cn/).  Beijing Normal University. 2016
 - National Inspirational Scholarship.  Beijing Normal University. 2015 - 2017
+
 
 
 
