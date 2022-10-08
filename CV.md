@@ -7,6 +7,6 @@ rss = "Canyi Chen's CV"
 
 # Curriculum vitae
 
-My resume can be found here in [[EN]](/static/CV/resume.pdf) or [[中文]](/static/CV/resume_zh_CN.pdf).
+My resume can be found here in [[EN]](/static/CV/cv.pdf).
 
 
