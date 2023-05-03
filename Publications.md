@@ -21,11 +21,13 @@ rss = "Canyi Chen's Publications"
 
 1. **Chen, C.**, Chen B., [Kong L.](https://faculty.bjtu.edu.cn/8316/), & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Robust Multi-task Learning in High Dimensions under Memory Constraint. Submitted.
 2.  Chen B., & **Chen, C.** (2022+). Fast Optimization Methods for High-dimensional Row-sparse Multivariate Quantile Linear Regression. Major Revision at *[Journal of Statistical Computation and Simulation](https://www.tandfonline.com/toc/gscs20/current)*.
-3.  **Chen, C.** (2022+). Communication-Efficient Estimation for Distributed Canonical Correlation Analysis. 
+3.  **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Distributed Estimation and Gap-Free  Analysis of Canonical Correlations. 
 4. **Chen, C.** (2022+). Robust and Efficient Sparse Learning over Networks: A Decentralized Surrogate Composite Quantile Regression Approach. 
+5. **Chen, C.** (2022+). Fast and Robust Low-Rank Learning over Networks: A Decentralized Matrix Quantile  Regression Approach. 
 
 ## Working papers
 
 
 1. **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Robust and Efficient Matrix Completion for Massive Data. 
+2. **Chen, C.**, Chen B. (2022+). Convoluted Support Matrix Machine in High Dimensions.
 
