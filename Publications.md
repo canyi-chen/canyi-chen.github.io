@@ -7,6 +7,7 @@ rss = "Canyi Chen's Publications"
 
 # Publications
 
+<!--
 ## Publications
 
 1. **Chen, C.**, [Xu, W.](http://stat.ruc.edu.cn/teacher_more.php?id=61&cid=25), & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022). Distributed Estimation in Heterogeneous Reduced Rank Regression: with Application to Order Determination in Sufficient Dimension Reduction. *[Journal of Multivariate Analysis](https://www.journals.elsevier.com/journal-of-multivariate-analysis)*, *[190(104991)](https://www.sciencedirect.com/journal/journal-of-multivariate-analysis/vol/190/suppl/C)*.  [[Link]](https://doi.org/10.1016/j.jmva.2022.104991), [[PDF]](/static/Publications/Chen2022Distributed%20estimation%20in%20heterogeneous%20reduced%20rank%20regression.pdf).
@@ -30,4 +31,7 @@ rss = "Canyi Chen's Publications"
 
 1. **Chen, C.**, & [Zhu L.](http://isbd.ruc.edu.cn/sztd/1300f3797f4e477789514056a51c9dfa.htm) (2022+). Robust and Efficient Matrix Completion for Massive Data. 
 2. **Chen, C.**, Chen B. (2022+). Convoluted Support Matrix Machine in High Dimensions.
-
+-->
+~~~
+ <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=1"></script> 
+~~~
