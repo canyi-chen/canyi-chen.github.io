@@ -33,5 +33,5 @@ rss = "Canyi Chen's Publications"
 2. **Chen, C.**, Chen B. (2022+). Convoluted Support Matrix Machine in High Dimensions.
 -->
 ~~~
- <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=1"></script> 
+ <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=0"></script> 
 ~~~
