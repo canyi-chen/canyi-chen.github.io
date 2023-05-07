@@ -7,6 +7,6 @@ rss = "Canyi Chen's CV"
 
 # Curriculum vitae
 
-My resume can be found here in [[EN]](https://www.overleaf.com/read/cxwcgnzsjdnj).
+My resume can be found here in [[EN]](https://canyi-chen.github.io/Canyi-CV/).
 
 
