@@ -9,7 +9,7 @@
 
 Howdy!
 
-I am currently a Ph.D. Candidate from [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/) at [Renmin University of China](https://www.ruc.edu.cn/) (RUC), advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en), and expected to graduate in June, 2023.  Prior to graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://www.bnu.edu.cn/) in 2018. I also serve as an anoumyous referee for *Statistica Sinica*.
+I am currently a Ph.D. Candidate from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/) at [Renmin University of China](https://www.ruc.edu.cn/) (RUC), advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en), and expected to graduate in June 2023.  Before graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://www.bnu.edu.cn/) in 2018. I also serve as an anonymous referee for *Statistica Sinica*.
 
 ## Research Interests
 
