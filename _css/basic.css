@@ -52,8 +52,11 @@ header .blog-name {
 }
 
 header .blog-name a {
-  color: #a6a2a0;
+  /* color: #a6a2a0; */
+  color: #004de6;
   text-decoration: none;
+  font-size: 22px;
+  font-weight: bolder;
 }
 
 header li a:hover {
@@ -92,7 +95,9 @@ header li a:hover {
 medium display: nav goes under name
 */
 @media (max-width: 760px) {
-  header { display: block; }
+  header {
+    display: block;
+  }
 
   header .blog-name {
     display: block;
@@ -116,9 +121,59 @@ instead, display a burger menu.
     align-items: center;
   }
 
+  /*
+.site-header {
+  -webkit-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  background: #002E6C;
+}
+
+.site-header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1299px) {
+  .site-header-container {
+    padding-top: 0.em;
+    padding-bottom: 0.em;
+  }
+}
+
+.site-title {
+  font-family: "Libre Franklin", "Open Sans", sans-serif;
+  font-size: 1.75em;
+  font-variant: none;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 2;
+  color: #ffffff;
+  text-align: left;
+  vertical-align: top;
+}
+
+.site-title:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-title:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+*/
   header .blog-name {
+    font-family: Georgia, "Times New Roman", Times, serif;
     display: inline-block;
     width: 70%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #3333cc;
   }
 
   nav {
@@ -147,8 +202,14 @@ instead, display a burger menu.
     padding: 0;
     margin: 0;
   }
-  header li a { border-bottom: none; }
-  header li a:hover { border-bottom: none; }
+
+  header li a {
+    border-bottom: none;
+  }
+
+  header li a:hover {
+    border-bottom: none;
+  }
 
   nav:hover ul {
     display: block;
@@ -174,7 +235,7 @@ tr:first-of-type {
   background: #eae9f4;
 }
 
-tr:first-of-type > th {
+tr:first-of-type>th {
   text-align: center;
 }
 
@@ -188,3 +249,4 @@ td {
 table tbody tr td {
   border: 1px solid lightgray;
 }
+

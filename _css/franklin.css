@@ -14,7 +14,8 @@
 ================================================================== */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  /* font-family: Helvetica, Arial, sans-serif; */
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: var(--normal);
   color: var(--text-color);
 }
@@ -180,6 +181,7 @@ td {
     GENERAL FORMATTING
 ================================================================== */
 
+
 /* Spacing between bullet points. */
 .franklin-content li p {
   margin: 10px 0;
@@ -193,6 +195,7 @@ td {
 .franklin-content a:hover {
   text-decoration: underline;
 }
+
 
 /* ==================================================================
     HYPERREFS AND FOOTNOTES
