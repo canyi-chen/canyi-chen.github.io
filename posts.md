@@ -7,6 +7,7 @@ rss = "Canyi Chen's Blog"
 
 
 
+
 ## Recent posts
 
 {{ recent_posts 10 }}
