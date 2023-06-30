@@ -8,7 +8,7 @@
 
 ## Biography
 
-Starting on September 1, 2023, I will be working as a Postdoc Research Fellow in the Department of Biostatistics at the University of Michigan in Ann Arbor under the guidance of Professor Peter Song. I earned my Ph.D. degree in statistics from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/English/) at [Renmin University of China](https://www.ruc.edu.cn/en) (RUC) in June 2023. I am lucky to be advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en).  Before the graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://english.bnu.edu.cn/) in 2018. 
+Starting on September 1, 2023, I will be working as a Postdoc Research Fellow in the Department of Biostatistics at the University of Michigan in Ann Arbor under the guidance of Professor [Peter Song](https://sph.umich.edu/faculty-profiles/song-peter.html). I earned my Ph.D. degree in statistics from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/English/) at [Renmin University of China](https://www.ruc.edu.cn/en) (RUC) in June 2023. I am lucky to be advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en).  Before the graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://english.bnu.edu.cn/) in 2018. 
 
 <!--
 I also serve as an anonymous referee for *Statistica Sinica*.
