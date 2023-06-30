@@ -58,3 +58,19 @@ end
 @delay function hfun_all_posts()
   return hfun_recent_posts(["-1"])
 end
+
+function hfun_list_posts(folders)
+  pages = String[]
+  root = Franklin.PATHS[:folder]
+  for folder in folders
+      startswith(folder, "/") && (folder = folder[2:end])
+      cd(root) do
+          foreach(((r, _, fs),) ->  append!(pages, joinpath.(r, fs)), walkdir(folder))
+      end # do
+  end
+  filter!(x -> endswith(x, ".md"), pages)
+  for i in eachindex(pages)
+      pages[i] = replace(pages[i], r"\.md$"=>"")
+  end
+  return list_pages_by_date(pages)
+end
