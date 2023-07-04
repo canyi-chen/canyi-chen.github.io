@@ -19,7 +19,7 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 1. Modern statistics
 2. Distributed algorithms
 3. Precision medicine
-4. Subgroup Analysis
+4. Subgroup analysis
 
 ## Curriculum Vitae
 
