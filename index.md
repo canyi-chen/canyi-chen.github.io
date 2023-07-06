@@ -18,8 +18,13 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 
 1. Modern statistics
 2. Distributed algorithms
-3. Precision medicine
-4. Subgroup analysis
+3. High-dimensional inference
+4. Nonlinear dependence measure and feature screening
+<!--
+1. Survival analysis
+2. Precision medicine
+3. Subgroup analysis
+-->
 
 ## Curriculum Vitae
 
