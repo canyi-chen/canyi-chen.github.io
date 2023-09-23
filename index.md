@@ -8,7 +8,7 @@
 
 ## Biography
 
-Starting on September 1, 2023, I will be working as a Postdoc Research Fellow in the Department of Biostatistics at the University of Michigan in Ann Arbor under the guidance of Professor [Peter Song](https://sph.umich.edu/faculty-profiles/song-peter.html). I earned my Ph.D. degree in statistics from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/English/) at [Renmin University of China](https://www.ruc.edu.cn/en) (RUC) in June 2023. I am lucky to be advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en).  Before the graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://english.bnu.edu.cn/) in 2018. 
+I am currently a Postdoc Research Fellow in the Department of Biostatistics at the University of Michigan in Ann Arbor under the guidance of Professor [Peter Song](https://sph.umich.edu/faculty-profiles/song-peter.html). I got my Ph.D. degree in statistics from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/English/) at [Renmin University of China](https://www.ruc.edu.cn/en) (RUC) in June 2023. I am lucky to be advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en).  Before the graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://english.bnu.edu.cn/) in 2018. 
 
 <!--
 I also serve as an anonymous referee for *Statistica Sinica*.
@@ -16,14 +16,17 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 
 ## Research Interests
 
-1. Modern statistics
+1. Causal mediation analysis
+2. Conformal prediction
 2. Distributed algorithms
-3. High-dimensional inference
-4. Nonlinear dependence measure and feature screening
+3. High-dimensional inference / Posterior Inference
 <!--
-1. Survival analysis
-2. Precision medicine
-3. Subgroup analysis
+1. Biological aging
+2. Modern statistics
+3. Survival analysis
+4. Precision medicine
+5. Subgroup analysis
+6. Nonlinear dependence measure and feature screening
 -->
 
 ## Curriculum Vitae
@@ -72,4 +75,4 @@ Institute of Statistics and Big Data
 Renmin University of China
 -->
 
-Email: cychen.stats [at] outlook [dot] com
+Email: cychen.stats [AT] outlook [DOT] com / canyic [AT] umich [DOT] edu
