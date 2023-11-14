@@ -17,8 +17,8 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 ## Research Interests
 
 1. Causal mediation analysis
+2. Distributed statistical learning
 2. Conformal prediction
-2. Distributed algorithms
 3. High-dimensional inference / Posterior Inference
 <!--
 1. Biological aging
