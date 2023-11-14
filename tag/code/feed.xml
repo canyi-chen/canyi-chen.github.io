@@ -38,7 +38,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -62,7 +62,7 @@
 <h1 id="publications">Publications</h1> <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=0"></script>  ]]>
   </content:encoded>
     
-  <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -88,7 +88,7 @@
  ]]>
   </content:encoded>
     
-  <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -113,16 +113,18 @@
 <ul>
 <li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;4&#41;</p>
 </li>
-<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;9&#41;</p>
+<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;10&#41;</p>
 </li>
 <li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;9&#41;</p>
+</li>
+<li><p><a href="http://canyi-chen.github.io/tag/slurm">slurm</a> &#40;1&#41;</p>
 </li>
 <li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;4&#41;</p>
 </li>
 </ul> ]]>
   </content:encoded>
     
-  <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
@@ -145,6 +147,8 @@
     <![CDATA[  
 <h2 id="recent_posts">Recent posts</h2>
 <ul>
+<li><p><a href="../posts/slurm">&#40;2023-11-05&#41; Introduction to Simple Linux Utility for Resource Management &#40;Slurm&#41;</a></p>
+</li>
 <li><p><a href="../posts/markov_chain">&#40;2022-04-12&#41; Selected Exercises for Markov Chain</a></p>
 </li>
 <li><p><a href="../posts/mouhe">&#40;2022-04-12&#41; Interviews for Mouhe</a></p>
@@ -165,6 +169,8 @@
 </li>
 </ul><h2 id="posts">Posts</h2>
 <ul>
+<li><p><a href="../posts/slurm">&#40;2023-11-05&#41; Introduction to Simple Linux Utility for Resource Management &#40;Slurm&#41;</a></p>
+</li>
 <li><p><a href="../posts/markov_chain">&#40;2022-04-12&#41; Selected Exercises for Markov Chain</a></p>
 </li>
 <li><p><a href="../posts/mouhe">&#40;2022-04-12&#41; Interviews for Mouhe</a></p>
@@ -186,7 +192,7 @@
 </ul><h2 id="tags">Tags</h2> ]]>
   </content:encoded>
     
-  <pubDate>Fri, 29 Sep 2023 00:00:00 +0000</pubDate>  
+  <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>  
   
   
   <atom:author>
