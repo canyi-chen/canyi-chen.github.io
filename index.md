@@ -8,7 +8,7 @@
 
 ## Biography
 
-Hi, my name is Canyi Chen (陈灿贻) and I am originally from Pingtan island, Fujian in China. I am currently a Postdoc Research Fellow in the [Department of Biostatistics](https://sph.umich.edu/biostat/) at the [University of Michigan](https://umich.edu/) in Ann Arbor under the guidance of Professor [Peter Song](https://sph.umich.edu/faculty-profiles/song-peter.html). I got my Ph.D. degree in statistics from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/English/) at [Renmin University of China](https://www.ruc.edu.cn/en) (RUC) in June 2023. I am lucky to be advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en).  Before the graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://english.bnu.edu.cn/) in 2018. 
+Hi, my name is Canyi Chen (陈灿贻) and I am originally from Fuzhou, Fujian in China. I am currently a Postdoc Research Fellow in the [Department of Biostatistics](https://sph.umich.edu/biostat/) at the [University of Michigan](https://umich.edu/) in Ann Arbor under the guidance of Professor [Peter Song](https://sph.umich.edu/faculty-profiles/song-peter.html). I got my Ph.D. degree in statistics from the [Institute of Statistics and Big Data](http://isbd.ruc.edu.cn/English/) at [Renmin University of China](https://www.ruc.edu.cn/en) (RUC) in June 2023. I am lucky to be advised by Professor [Liping Zhu](https://scholar.google.com/citations?user=IRVKAnAAAAAJ&hl=en).  Before the graduate school, I received my Bachelor in [Mathematics](http://math.bnu.edu.cn/) from [Beijing Normal  University](https://english.bnu.edu.cn/) in 2018. Before that, I graduated from [Affiliated High School of Fujian Normal University](https://sdfz.fjnu.edu.cn/).
 
 <!--
 I also serve as an anonymous referee for *Statistica Sinica*.
@@ -31,7 +31,7 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 
 ## Curriculum Vitae
 
-My resume can be found here in [[EN]](https://canyi-chen.github.io/Canyi-CV/main.pdf).
+My resume can be found here in [[EN]](https://canyi-chen.github.io/Canyi-CV).
 
 
 
