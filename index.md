@@ -31,7 +31,7 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 
 ## Curriculum Vitae
 
-My resume can be found here in [[EN]](https://canyi-chen.github.io/Canyi-CV).
+My resume can be found here in [[EN]](https://canyi-chen.github.io/Canyi-CV/main.pdf).
 
 
 
