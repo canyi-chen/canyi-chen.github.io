@@ -37,7 +37,7 @@ dp[<span class=hljs-number >0</span>][<span class=hljs-number >0</span>] = <span
 <span class=hljs-built_in >print</span>(dp[n][<span class=hljs-number >0</span>])</code></pre> <pre><code class="cpp hljs"><span class=hljs-meta >#<span class=hljs-keyword >include</span><span class=hljs-string >&lt;bits/stdc++.h&gt;</span></span>
 <span class=hljs-keyword >using</span> <span class=hljs-keyword >namespace</span> std;
 <span class=hljs-keyword >typedef</span> <span class=hljs-type >long</span> <span class=hljs-type >long</span> ll;
-<span class=hljs-type >const</span> <span class=hljs-type >int</span> maxn= <span class=hljs-number >1e6</span>+<span class=hljs-number >7</span> ;
+<span class=hljs-type >const</span> <span class=hljs-type >int</span> maxn= <span class=hljs-number >1e6</span><span class=hljs-number >+7</span> ;
 <span class=hljs-type >const</span> <span class=hljs-type >int</span> inf = <span class=hljs-number >0x3f3f3f3f</span>;
 <span class=hljs-type >int</span> n , a[maxn];
 <span class=hljs-type >int</span> dp[maxn][<span class=hljs-number >10</span>];
@@ -65,19 +65,19 @@ dp[<span class=hljs-number >0</span>][<span class=hljs-number >0</span>] = <span
         <span class=hljs-string >&quot;&quot;&quot;
         initialize your data structure here.
         &quot;&quot;&quot;</span>
-        self.A = []  <span class=hljs-comment ># 小顶堆，保留较大的一半</span>
-        self.B = []  <span class=hljs-comment ># 大顶堆，保留较小的一半</span>
+        <span class="hljs-variable language_">self</span>.A = []  <span class=hljs-comment ># 小顶堆，保留较大的一半</span>
+        <span class="hljs-variable language_">self</span>.B = []  <span class=hljs-comment ># 大顶堆，保留较小的一半</span>
 
     <span class=hljs-keyword >def</span> <span class="hljs-title function_">addNum</span>(<span class=hljs-params >self, num: <span class=hljs-built_in >int</span></span>) -&gt; <span class=hljs-literal >None</span>:
-        <span class=hljs-keyword >if</span> <span class=hljs-built_in >len</span>(self.A) != <span class=hljs-built_in >len</span>(self.B):
-            heappush(self.A, num)
-            heappush(self.B, -heappop(self.A))
+        <span class=hljs-keyword >if</span> <span class=hljs-built_in >len</span>(<span class="hljs-variable language_">self</span>.A) != <span class=hljs-built_in >len</span>(<span class="hljs-variable language_">self</span>.B):
+            heappush(<span class="hljs-variable language_">self</span>.A, num)
+            heappush(<span class="hljs-variable language_">self</span>.B, -heappop(<span class="hljs-variable language_">self</span>.A))
         <span class=hljs-keyword >else</span>:
-            heappush(self.B, -num)
-            heappush(self.A, -heappop(self.B))
+            heappush(<span class="hljs-variable language_">self</span>.B, -num)
+            heappush(<span class="hljs-variable language_">self</span>.A, -heappop(<span class="hljs-variable language_">self</span>.B))
 
     <span class=hljs-keyword >def</span> <span class="hljs-title function_">findMedian</span>(<span class=hljs-params >self</span>) -&gt; <span class=hljs-built_in >float</span>:
-        <span class=hljs-keyword >return</span> self.A[<span class=hljs-number >0</span>] <span class=hljs-keyword >if</span> <span class=hljs-built_in >len</span>(self.A) != <span class=hljs-built_in >len</span>(self.B) <span class=hljs-keyword >else</span> (self.A[<span class=hljs-number >0</span>] - self.B[<span class=hljs-number >0</span>]) / <span class=hljs-number >2.0</span>
+        <span class=hljs-keyword >return</span> <span class="hljs-variable language_">self</span>.A[<span class=hljs-number >0</span>] <span class=hljs-keyword >if</span> <span class=hljs-built_in >len</span>(<span class="hljs-variable language_">self</span>.A) != <span class=hljs-built_in >len</span>(<span class="hljs-variable language_">self</span>.B) <span class=hljs-keyword >else</span> (<span class="hljs-variable language_">self</span>.A[<span class=hljs-number >0</span>] - <span class="hljs-variable language_">self</span>.B[<span class=hljs-number >0</span>]) / <span class=hljs-number >2.0</span>
 
 n = <span class=hljs-built_in >int</span>(<span class=hljs-built_in >input</span>())
 nums = <span class=hljs-built_in >list</span>(<span class=hljs-built_in >map</span>(<span class=hljs-built_in >int</span>, <span class=hljs-built_in >input</span>().split()))
@@ -96,34 +96,34 @@ ans = <span class=hljs-number >0</span>
 <span class=hljs-built_in >print</span>(ans)</code></pre> <pre><code class="cpp hljs"><span class=hljs-meta >#<span class=hljs-keyword >include</span><span class=hljs-string >&lt;bits/stdc++.h&gt;</span></span>
 <span class=hljs-keyword >using</span> <span class=hljs-keyword >namespace</span> std;
 <span class=hljs-keyword >typedef</span> <span class=hljs-type >long</span> <span class=hljs-type >long</span> ll;
-<span class=hljs-type >const</span> <span class=hljs-type >int</span> maxn= <span class=hljs-number >1e6</span>+<span class=hljs-number >7</span> ;
+<span class=hljs-type >const</span> <span class=hljs-type >int</span> maxn= <span class=hljs-number >1e6</span><span class=hljs-number >+7</span> ;
 <span class=hljs-type >const</span> <span class=hljs-type >int</span> inf = <span class=hljs-number >0x3f3f3f3f</span>;
 <span class=hljs-type >int</span> n , a[maxn];
 priority_queue&lt;<span class=hljs-type >int</span>&gt;q1,q2;
 <span class=hljs-function ><span class=hljs-type >void</span> <span class=hljs-title >init</span><span class=hljs-params >()</span></span>{
-    <span class=hljs-keyword >while</span>(q1.<span class=hljs-built_in >size</span>()) q1.<span class=hljs-built_in >pop</span>();
-    <span class=hljs-keyword >while</span>(q2.<span class=hljs-built_in >size</span>()) q2.<span class=hljs-built_in >pop</span>();
+    <span class=hljs-keyword >while</span>(q<span class=hljs-number >1.</span><span class=hljs-built_in >size</span>()) q<span class=hljs-number >1.</span><span class=hljs-built_in >pop</span>();
+    <span class=hljs-keyword >while</span>(q<span class=hljs-number >2.</span><span class=hljs-built_in >size</span>()) q<span class=hljs-number >2.</span><span class=hljs-built_in >pop</span>();
 }
 <span class=hljs-function ><span class=hljs-type >void</span> <span class=hljs-title >add</span><span class=hljs-params >(<span class=hljs-type >int</span> now)</span></span>{
-    <span class=hljs-keyword >if</span>(q2.<span class=hljs-built_in >size</span>() == <span class=hljs-number >0</span>){
-        q2.<span class=hljs-built_in >push</span>(-now);
+    <span class=hljs-keyword >if</span>(q<span class=hljs-number >2.</span><span class=hljs-built_in >size</span>() == <span class=hljs-number >0</span>){
+        q<span class=hljs-number >2.</span><span class=hljs-built_in >push</span>(-now);
         <span class=hljs-keyword >return</span> ;
     }
-    <span class=hljs-keyword >if</span>(now &gt;= -q2.<span class=hljs-built_in >top</span>()){
-        q2.<span class=hljs-built_in >push</span>(-now);
-        <span class=hljs-keyword >if</span>(q2.<span class=hljs-built_in >size</span>() &gt; q1.<span class=hljs-built_in >size</span>() + <span class=hljs-number >1</span>){
-            <span class=hljs-type >int</span> x = q2.<span class=hljs-built_in >top</span>();
-            q2.<span class=hljs-built_in >pop</span>();
-            q1.<span class=hljs-built_in >push</span>(-x);
+    <span class=hljs-keyword >if</span>(now &gt;= -q<span class=hljs-number >2.</span><span class=hljs-built_in >top</span>()){
+        q<span class=hljs-number >2.</span><span class=hljs-built_in >push</span>(-now);
+        <span class=hljs-keyword >if</span>(q<span class=hljs-number >2.</span><span class=hljs-built_in >size</span>() &gt; q<span class=hljs-number >1.</span><span class=hljs-built_in >size</span>() + <span class=hljs-number >1</span>){
+            <span class=hljs-type >int</span> x = q<span class=hljs-number >2.</span><span class=hljs-built_in >top</span>();
+            q<span class=hljs-number >2.</span><span class=hljs-built_in >pop</span>();
+            q<span class=hljs-number >1.</span><span class=hljs-built_in >push</span>(-x);
         }
     }
     <span class=hljs-keyword >else</span>{
-        q1.<span class=hljs-built_in >push</span>(now);
+        q<span class=hljs-number >1.</span><span class=hljs-built_in >push</span>(now);
  
-        <span class=hljs-keyword >if</span>(q1.<span class=hljs-built_in >size</span>() &gt; q2.<span class=hljs-built_in >size</span>()){
-            <span class=hljs-type >int</span> x = q1.<span class=hljs-built_in >top</span>();
-            q1.<span class=hljs-built_in >pop</span>();
-            q2.<span class=hljs-built_in >push</span>(-x);
+        <span class=hljs-keyword >if</span>(q<span class=hljs-number >1.</span><span class=hljs-built_in >size</span>() &gt; q<span class=hljs-number >2.</span><span class=hljs-built_in >size</span>()){
+            <span class=hljs-type >int</span> x = q<span class=hljs-number >1.</span><span class=hljs-built_in >top</span>();
+            q<span class=hljs-number >1.</span><span class=hljs-built_in >pop</span>();
+            q<span class=hljs-number >2.</span><span class=hljs-built_in >push</span>(-x);
         }
     }
 }
@@ -140,7 +140,7 @@ priority_queue&lt;<span class=hljs-type >int</span>&gt;q1,q2;
         <span class=hljs-keyword >for</span>(<span class=hljs-type >int</span> r = l + <span class=hljs-number >1</span>;r &lt;= n; r ++){
             <span class=hljs-built_in >add</span>(a[r]);
             <span class=hljs-keyword >if</span>((r - l + <span class=hljs-number >1</span>) % <span class=hljs-number >2</span>){
-                ans -= q2.<span class=hljs-built_in >top</span>();
+                ans -= q<span class=hljs-number >2.</span><span class=hljs-built_in >top</span>();
             }
         }
     }
@@ -148,7 +148,7 @@ priority_queue&lt;<span class=hljs-type >int</span>&gt;q1,q2;
 }</code></pre> <ol start=5 > <li><p>有n个任务，完成每个任务需要的时间为l&#91;i&#93;l&#91;i&#93;,在完成该任务前，必须先完成一些前置任务，多个任务可以同时进行，问每个任务的最早完成时间。</p> </ol> <pre><code class="cpp hljs"><span class=hljs-meta >#<span class=hljs-keyword >include</span><span class=hljs-string >&lt;bits/stdc++.h&gt;</span></span>
 <span class=hljs-keyword >using</span> <span class=hljs-keyword >namespace</span> std;
 <span class=hljs-keyword >typedef</span> <span class=hljs-type >long</span> <span class=hljs-type >long</span> ll;
-<span class=hljs-type >const</span> <span class=hljs-type >int</span> maxn= <span class=hljs-number >1e6</span>+<span class=hljs-number >7</span> ;
+<span class=hljs-type >const</span> <span class=hljs-type >int</span> maxn= <span class=hljs-number >1e6</span><span class=hljs-number >+7</span> ;
 <span class=hljs-type >const</span> <span class=hljs-type >int</span> inf = <span class=hljs-number >0x3f3f3f3f</span>;
 <span class=hljs-type >int</span> n;
 <span class=hljs-type >int</span> l[maxn] , now[maxn] , de[maxn],ans , vis[maxn];
@@ -194,4 +194,4 @@ vector&lt;<span class=hljs-type >int</span>&gt; vec[maxn] , e[maxn];
     <span class=hljs-keyword >for</span>(<span class=hljs-type >int</span> i = <span class=hljs-number >1</span>; i &lt;= n; i ++){
         <span class=hljs-built_in >printf</span> (<span class=hljs-string >&quot;%d &quot;</span>,now[i]);
     }
-}</code></pre> <h2 id="不定项选择题"><a href="#不定项选择题" class=header-anchor >不定项选择题</a></h2> <ul> <li><p>梯度下降与最速下降</p> </ul> <div class=page-foot > <div class=copyright > &copy; Canyi Chen. Last modified: May 20, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. Icons by <a href="https://fontawesome.com/">Font Awesome</a>. <a href="https://github.com/canyi-chen"><i class="fa-brands fa-github-square"></i> Github</a>. <a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden=true ></i> Feed</a>. <a href="/posts"><i class="fa-solid fa-blog"></i> Blog</a>. </div> </div> </div> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script> --> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
+}</code></pre> <h2 id="不定项选择题"><a href="#不定项选择题" class=header-anchor >不定项选择题</a></h2> <ul> <li><p>梯度下降与最速下降</p> </ul> <div class=page-foot > <div id=outerContainer  style="display: flex; justify-content: center; align-items: center; height: 20vh;"> <div id=mapContainer  style="width: 300px; height: 200px;"> <script type="text/javascript" id=mapmyvisitors  src="//mapmyvisitors.com/map.js?d=sUwpVOfz6zy023PVROxzxpuqzluKKdLhMk9d_LMF6Mo&cl=ffffff&w=a"> </script> </div> </div> <div class=copyright > &copy; Canyi Chen. Last modified: September 29, 2024. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. Icons by <a href="https://fontawesome.com/">Font Awesome</a>. <a href="https://github.com/canyi-chen"><i class="fa-brands fa-github-square"></i> Github</a>. <a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden=true ></i> Feed</a>. <a href="/posts"><i class="fa-solid fa-blog"></i> Blog</a>. </div> </div> </div> <div id=mapContainer  style="width: 500px; height: 400px;"> <script type="text/javascript" id=mapmyvisitors  src="//mapmyvisitors.com/map.js?d=sUwpVOfz6zy023PVROxzxpuqzluKKdLhMk9d_LMF6Mo&cl=ffffff&w=a"> </script> </div> <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script> --> <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/js/all.min.js"></script>
