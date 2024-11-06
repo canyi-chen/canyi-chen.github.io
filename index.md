@@ -48,8 +48,14 @@ chency1997 [at] ruc [dot] edu [dot] cn
 ## Publications
 
 ~~~
- <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=0"></script> 
+ <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&css=./css/bibbase.css&group0=type&sort=-year&theme=dividers&fullnames=0&commas=,&showSearch=1&nocache=0&authorFirst=1"></script> 
 ~~~
+
+
+
+
+
+
 
 <!--
 ## Honors and Awards
