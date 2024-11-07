@@ -137,7 +137,9 @@
   font-size: smaller;
 }
 
-
+br.bibbase_paper_content {
+  display: none;
+}
 
 
 .bibbase_icon {
@@ -152,9 +154,7 @@
 
 
 /*
-br.bibbase_paper_content {
-  display: none;
-}
+
 
 .bibbase.bibtex.link {
   display: none;
