@@ -23,56 +23,6 @@
 
 <item>
   <title>
-    <![CDATA[  Contact  ]]>
-  </title>
-  <link> http://canyi-chen.github.io/Contact/index.html </link>
-  <guid> http://canyi-chen.github.io/Contact/index.html </guid>
-  <description>
-    <![CDATA[  Canyi Chen&#39;s Contact  ]]>
-  </description>  
-  
-  <content:encoded>
-    <![CDATA[  
-<h1 id="contact">Contact</h1>
-<p>Email: chency1997 &#91;at&#93; ruc &#91;dot&#93; edu &#91;dot&#93; cn</p>
- ]]>
-  </content:encoded>
-    
-  <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Canyi Chen</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
-    <![CDATA[  Publications  ]]>
-  </title>
-  <link> http://canyi-chen.github.io/Publications/index.html </link>
-  <guid> http://canyi-chen.github.io/Publications/index.html </guid>
-  <description>
-    <![CDATA[  Canyi Chen&#39;s Publications  ]]>
-  </description>  
-  
-  <content:encoded>
-    <![CDATA[  
-<h1 id="publications">Publications</h1> <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=0"></script>  ]]>
-  </content:encoded>
-    
-  <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>  
-  
-  
-  <atom:author>
-    <atom:name>Canyi Chen</atom:name>
-  </atom:author>
-        
-</item>
-
-<item>
-  <title>
     <![CDATA[  Curriculum vitae  ]]>
   </title>
   <link> http://canyi-chen.github.io/CV/index.html </link>
@@ -99,6 +49,32 @@
 
 <item>
   <title>
+    <![CDATA[  Contact  ]]>
+  </title>
+  <link> http://canyi-chen.github.io/Contact/index.html </link>
+  <guid> http://canyi-chen.github.io/Contact/index.html </guid>
+  <description>
+    <![CDATA[  Canyi Chen&#39;s Contact  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="contact">Contact</h1>
+<p>Email: chency1997 &#91;at&#93; ruc &#91;dot&#93; edu &#91;dot&#93; cn</p>
+ ]]>
+  </content:encoded>
+    
+  <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Canyi Chen</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
     <![CDATA[  Blogs  ]]>
   </title>
   <link> http://canyi-chen.github.io/tag/index.html </link>
@@ -111,17 +87,35 @@
     <![CDATA[  
 <h2 id="tags">Tags</h2>
 <ul>
-<li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;4&#41;</p>
+<li><p><a href="http://canyi-chen.github.io/tag/code">code</a> &#40;3&#41;</p>
 </li>
-<li><p><a href="http://canyi-chen.github.io/tag/julia">julia</a> &#40;10&#41;</p>
-</li>
-<li><p><a href="http://canyi-chen.github.io/tag/meta">meta</a> &#40;9&#41;</p>
-</li>
-<li><p><a href="http://canyi-chen.github.io/tag/slurm">slurm</a> &#40;1&#41;</p>
-</li>
-<li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;4&#41;</p>
+<li><p><a href="http://canyi-chen.github.io/tag/syntax">syntax</a> &#40;3&#41;</p>
 </li>
 </ul> ]]>
+  </content:encoded>
+    
+  <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>  
+  
+  
+  <atom:author>
+    <atom:name>Canyi Chen</atom:name>
+  </atom:author>
+        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Publications  ]]>
+  </title>
+  <link> http://canyi-chen.github.io/Publications/index.html </link>
+  <guid> http://canyi-chen.github.io/Publications/index.html </guid>
+  <description>
+    <![CDATA[  Canyi Chen&#39;s Publications  ]]>
+  </description>  
+  
+  <content:encoded>
+    <![CDATA[  
+<h1 id="publications">Publications</h1> <script src="https://bibbase.org/show?bib=https://raw.githubusercontent.com/canyi-chen/Canyi-CV/main/ref.bib&jsonp=1&group0=type&group1=year&theme=simple&authorFirst=1&fullnames=0&commas=,&showSearch=1&nocache=0"></script>  ]]>
   </content:encoded>
     
   <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>  
