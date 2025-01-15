@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>http://canyi-chen.github.io/posts/relaxtion/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/relaxtion/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/jingdong-0402/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/slurm/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -26,49 +26,25 @@
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/tailai/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/baidu_0329/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/slurm/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/work/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/baidu_0329/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/recents-posts/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/recents-posts/index.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>http://canyi-chen.github.io/posts/mouhe/index.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>http://canyi-chen.github.io/posts/alibaba-0325/index.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>http://canyi-chen.github.io/posts/markov_chain/index.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>http://canyi-chen.github.io/posts/work/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/jingdong-0402/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -80,31 +56,49 @@
     <priority>0.5</priority>
 </url>
 <url>
+    <loc>http://canyi-chen.github.io/drafts/meituan-0326/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/drafts/tailai/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/drafts/alibaba-0325/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
+    <loc>http://canyi-chen.github.io/drafts/mouhe/index.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+</url>
+<url>
     <loc>http://canyi-chen.github.io/404/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/meituan-0326/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/markov_chain/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
-    <loc>http://canyi-chen.github.io/posts/pdd-0410/index.html</loc>
+    <loc>http://canyi-chen.github.io/drafts/pdd-0410/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
 </url>
 <url>
     <loc>http://canyi-chen.github.io/tag/index.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-</url>
-<url>
-    <loc>http://canyi-chen.github.io/posts/index.html</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
