@@ -16,8 +16,10 @@ rss = "Canyi Chen's Blog"
 
 {{ all_posts }}
 
-
+<!--
 
 ## Tags
 
+
 {{ tag_landing_page }}
+-->
