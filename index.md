@@ -16,17 +16,19 @@ I also serve as an anonymous referee for *Statistica Sinica*.
 
 ## Research Interests
 
-1. Causal mediation analysis
-2. Distributed statistical learning
-2. Conformal prediction
-3. High-dimensional inference / Posterior Inference
+
+1. Distributed statistical learning
+2. Statistical testing for black-box learners, e.g., neural networks, diffusion models and generative adversarial network (GAN)
+3. Causal mediation analysis
+4. High-dimensional inference / Posterior inference
 <!--
 1. Biological aging
 2. Modern statistics
 3. Survival analysis
 4. Precision medicine
 5. Subgroup analysis
-6. Nonlinear dependence measure and feature screening
+6. Conformal prediction
+7. Nonlinear dependence measure and feature screening
 -->
 
 ## Curriculum Vitae
